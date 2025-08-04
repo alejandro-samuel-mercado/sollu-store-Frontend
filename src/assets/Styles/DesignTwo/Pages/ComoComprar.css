@@ -1,0 +1,366 @@
+/* Contenedor principal */
+.design-two .como-comprar-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--fondo1) 60%, var(--fondo2) 100%); 
+  padding: 120px 20px; /* Más espacio */
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" como fuente primaria */
+  position: relative;
+  overflow: hidden; /* Para elementos decorativos */
+}
+
+/* Elemento decorativo de fondo */
+.design-two .como-comprar-container::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: var(--cuarto); /* #85ee8562 - Verde claro translúcido */
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* Hero Section */
+.design-two .hero-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: var(--fondo1);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.design-two .hero-title {
+  font-size: 2.8rem; /* Grande para impacto */
+  color: var(--primario1); /* #485295 - Azul oscuro */
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.design-two .hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Steps Section */
+.design-two .steps-section {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.design-two .step {
+  display: flex;
+  align-items: center;
+  background: var(--fondo1);
+  border: 1px solid var(--fondo2); /* #e6e1e1 - Borde claro */
+  border-left: 6px solid var(--primario1); /* #485295 - Borde lateral azul */
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.342);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-two .step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.74);
+}
+
+.design-two .step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--primario1); /* #485295 - Azul oscuro */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.design-two .step-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--secundario1); /* #50c878 - Verde claro */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-right: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .step-title {
+  font-size: 1.6rem;
+  color: var(--terciario); /* #333333 - Gris oscuro */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.design-two .step-description {
+  font-size: 1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  line-height: 1.6;
+  margin: 0;
+}
+
+.design-two .email-info {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: rgba(72, 82, 149, 0.1); /* Fondo sutil azul */
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.design-two .email-icon {
+  color: var(--primario1); /* #485295 - Azul oscuro */
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.design-two .email-info span {
+  font-size: 0.95rem;
+  color: var(--primario1); /* #485295 - Azul oscuro */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-weight: 600;
+}
+
+/* Notes Section */
+.design-two .notes-section {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 20px;
+  background: var(--fondo1);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.486),0 6px 20px rgba(0, 0, 0, 0.486);
+  position: relative;
+  z-index: 1;
+}
+
+.design-two .notes-title {
+  font-size: 2rem;
+  color: var(--secundario2); /* #2e8b57 - Verde oscuro */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .note-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.design-two .note-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--secundario2); /* #2e8b57 - Verde oscuro */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .note-item p {
+  font-size: 1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  line-height: 1.6;
+  margin: 0;
+}
+
+.design-two .note-item p strong {
+  color: var(--terciario); /* #333333 - Gris oscuro */
+}
+
+/* Footer Section */
+.design-two .footer-section {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(to top, var(--fondo2), var(--fondo1)); /* Gradiente inverso */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
+}
+
+.design-two .footer-section p {
+  font-size: 1.1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-bottom: 20px;
+}
+
+.design-two .support-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: var(--secundario1); /* #50c878 - Verde claro */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+  border: none;
+  border-radius: 8px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .support-button:hover {
+  background: var(--secundario2); /* #2e8b57 - Verde oscuro */
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .design-two .como-comprar-container {
+    padding: 30px 15px;
+  }
+
+  .design-two .hero-section {
+    padding: 30px 15px;
+    margin-bottom: 30px;
+  }
+
+  .design-two .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .design-two .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .design-two .step {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .design-two .step-number,
+  .design-two .step-icon {
+    margin: 0 auto 15px;
+  }
+
+  .design-two .step-title {
+    font-size: 1.4rem;
+  }
+
+  .design-two .step-description {
+    font-size: 0.95rem;
+  }
+
+  .design-two .email-info {
+    justify-content: center;
+  }
+
+  .design-two .notes-title {
+    font-size: 1.8rem;
+  }
+
+  .design-two .note-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .design-two .note-icon {
+    margin: 0 auto 10px;
+  }
+
+  .design-two .footer-section {
+    padding: 20px 15px;
+  }
+
+  .design-two .support-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-two .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .design-two .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .design-two .step {
+    padding: 15px;
+  }
+
+  .design-two .step-number,
+  .design-two .step-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .design-two .step-title {
+    font-size: 1.2rem;
+  }
+
+  .design-two .step-description {
+    font-size: 0.9rem;
+  }
+
+  .design-two .email-info span {
+    font-size: 0.85rem;
+  }
+
+  .design-two .notes-title {
+    font-size: 1.6rem;
+  }
+
+  .design-two .note-item p {
+    font-size: 0.9rem;
+  }
+
+  .design-two .footer-section p {
+    font-size: 1rem;
+  }
+
+  .design-two .support-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .design-two .steps-section {
+    max-width: 700px;
+  }
+
+  .design-two .notes-section {
+    max-width: 600px;
+  }
+}

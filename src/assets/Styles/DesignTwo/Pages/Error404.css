@@ -1,0 +1,343 @@
+/* Contenedor principal */
+.design-two .error-404-container {
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background: var(--fondo1); /* #f5f1f1 - Fondo gris muy claro */
+  padding: 90px 20px !important; /* Padding similar al dashboard */
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" como fuente primaria */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Para los elementos decorativos flotantes */
+  overflow: hidden; /* Evita desbordes de los elementos decorativos */
+}
+
+/* Encabezado */
+.design-two .error-404-header {
+  text-align: center;
+  margin-bottom: 0px; /* Espacio debajo como en el dashboard */
+}
+
+/* Título del encabezado */
+.design-two .error-404-title {
+  font-size: 3rem; /* Tamaño grande para destacar el "404" */
+  color: var(--terciario); /* #333333 - Gris oscuro para contraste */
+  font-weight: 600; /* Peso fuerte como los títulos del dashboard */
+  text-transform: uppercase; /* Estilo consistente */
+  border-bottom: 2px solid var(--fondo3); /* #e6e1e1 - Línea inferior clara */
+  padding-bottom: 10px;
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.design-two .error-404-title:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+/* Forma decorativa debajo del título */
+.design-two .error-shape {
+  width: 120px; /* Ancho similar al header-shape */
+  height: 4px; /* Altura delgada */
+  background: var(--secundario1); /* #50c878 - Verde claro */
+  margin: 5px auto 0 auto !important; /* Centrado con espacio arriba */
+  border-radius: 2px;
+}
+
+/* Contenido principal */
+.design-two .error-404-content {
+  max-width: 600px; /* Ancho más pequeño para centrar el mensaje */
+  background: transparent; /* Fondo blanco puro */
+  border-radius: 8px;
+  margin-top: -40px;
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Para los elementos decorativos */
+  z-index: 10; /* Asegura que esté por encima de los elementos decorativos */
+}
+
+/* Mensaje de error */
+.design-two .error-404-container .error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(242, 243, 245, 0.432) !important;
+}
+
+/* Ícono de error */
+.design-two .error-404-container .error-icon {
+  font-size: 2rem;
+  color: var(--secundario2); 
+  font-weight: bold;
+  padding: 0;
+  margin: -10px auto !important;
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.design-two .error-404-container .error-icon:hover {
+  transform: scale(1.1); /* Efecto de escala */
+}
+
+/* Subtítulo de error */
+.design-two .error-404-container .error-subtitle {
+  font-size: 1.8rem;
+  color: var(--terciario); /* #333333 - Gris oscuro */
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" */
+}
+
+/* Texto de error */
+.design-two .error-404-container .error-text {
+  font-size: 1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Acciones de error */
+.design-two .error-404-container .error-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* Espacio como en modal-footer */
+  flex-wrap: wrap;
+}
+
+/* Botones */
+.design-two .home-btn,
+.design-two .products-btn {
+  padding: 10px 20px; /* Tamaño como los botones del dashboard */
+  border: none;
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+}
+
+/* Botón "Volver al Inicio" */
+.design-two .home-btn {
+  background: var(--primario1); /* #485295 - Azul oscuro */
+}
+
+.design-two .home-btn:hover {
+  background: var(--primario2); /* #7cbcfc - Azul claro */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón "Explorar Productos" */
+.design-two .products-btn {
+  background: var(--secundario2); /* #2e8b57 - Verde oscuro */
+}
+
+.design-two .products-btn:hover {
+  background: var(--secundario1); /* #50c878 - Verde claro */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Elementos decorativos animados - Orbes flotantes */
+.design-two .floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--cuarto); /* #85ee8562 - Verde claro translúcido */
+  animation: float 6s ease-in-out infinite;
+}
+
+.design-two .orb-1 {
+  width: 60px;
+  height: 60px;
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.design-two .orb-2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.design-two .orb-3 {
+  width: 40px;
+  height: 40px;
+  bottom: 20%;
+  left: 25%;
+  animation-delay: 4s;
+}
+
+/* Elementos decorativos animados - Engranajes giratorios */
+.design-two .spinning-gear {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23a2a2a3" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zM9 12h6m-3-3v6"/></svg>') no-repeat center;
+  background-size: contain;
+  animation: spin 4s linear infinite;
+}
+
+.design-two .gear-1 {
+  top: 20%;
+  right: 20%;
+}
+
+.design-two .gear-2 {
+  bottom: 15%;
+  left: 10%;
+  animation-direction: reverse; /* Gira en sentido contrario */
+}
+
+/* Footer */
+.design-two .error-404-footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-top: 30px;
+}
+
+.design-two .error-404-footer a {
+  color: var(--primario2); /* #7cbcfc - Azul claro */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.design-two .error-404-footer a:hover {
+  color: var(--primario1); /* #485295 - Azul oscuro */
+}
+
+/* Animaciones */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .design-two .error-404-container {
+    padding: 20px 15px; /* Padding reducido */
+  }
+
+  .design-two .error-404-title {
+    font-size: 3rem; /* Tamaño reducido */
+    margin-bottom: 20px;
+  }
+
+  .design-two .error-404-container .error-shape {
+    width: 80px; /* Ancho más pequeño */
+  }
+
+  .design-two  .error-404-container .error-404-content {
+    padding: 15px; /* Padding reducido */
+  }
+
+  .design-two .error-404-container .error-icon {
+    font-size: 2.5rem; /* Ícono más pequeño */
+  }
+
+  .design-two .error-subtitle {
+    font-size: 1.5rem; /* Subtítulo más pequeño */
+    margin-bottom: 10px;
+  }
+
+  .design-two .error-404-container .error-text {
+    font-size: 0.9rem; /* Texto más pequeño */
+    margin-bottom: 20px;
+  }
+
+  .design-two .error-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .design-two .home-btn,
+  .design-two .products-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .floating-orb {
+    opacity: 0.8; /* Reducimos visibilidad en tablets */
+  }
+
+  .design-two .spinning-gear {
+    width: 40px;
+    height: 40px;
+  }
+
+  .design-two .error-404-footer {
+    font-size: 0.85rem;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-two .error-404-title {
+    font-size: 2.5rem; /* Aún más pequeño */
+    margin-bottom: 15px;
+  }
+
+  .design-two .error-404-container .error-icon {
+    font-size: 2rem;
+  }
+
+  .design-two .error-404-container .error-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .design-two .error-404-container .error-text {
+    font-size: 0.85rem;
+  }
+
+  .design-two .home-btn,
+  .design-two .products-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .design-two .floating-orb {
+    display: none; /* Ocultamos orbes en móviles pequeños */
+  }
+
+  .design-two .spinning-gear {
+    width: 30px;
+    height: 30px;
+  }
+
+  .design-two .error-404-footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .design-two .error-404-container {
+    padding: 25px 20px;
+  }
+
+  .design-two .error-404-content {
+    max-width: 500px; /* Ajustamos el ancho máximo */
+  }
+}

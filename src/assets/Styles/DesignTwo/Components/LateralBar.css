@@ -1,0 +1,237 @@
+/* Contenedor de la barra lateral */
+.design-two .sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Oculta por defecto */
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra pronunciada */
+  border-right: 2px solid var(--primario1); /* Borde azul oscuro */
+  z-index: 1000;
+  transition: left 0.3s ease;
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" */
+  overflow-y: auto;
+}
+
+.design-two .sidebar.open {
+  left: 0; /* Muestra la barra lateral cuando está abierta */
+}
+
+/* Botón de cierre */
+.design-two .closed-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.design-two .closed-btn:hover {
+  transform: scale(1.2);
+}
+
+.design-two .close-icon {
+  font-size: 1.5rem;
+  color: var(--primario1); /* Azul oscuro */
+}
+
+/* Contenido de la barra lateral */
+.design-two .sidebar-content {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Botón de reinicio */
+.design-two .reset-btn {
+  padding: 10px 15px;
+  background: var(--primario1); /* Azul oscuro */
+  color: var(--colorFuentePrimaria); /* Blanco */
+  border: 1px solid var(--primario2); /* Borde azul claro */
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .reset-btn:hover {
+  background: var(--primario2); /* Azul claro */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección de filtros */
+.design-two .filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Título de filtro */
+.design-two .filter-title {
+  font-size: 1.3rem;
+  color: var(--primario1); /* Azul oscuro */
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Grupo de filtros */
+.design-two .filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Botones de filtro */
+.design-two .filter-btn {
+  padding: 10px 15px;
+  background: var(--fondo2); /* Gris claro */
+  color: var(--terciario); /* Gris oscuro */
+  border: 2px solid var(--primario1); /* Borde azul oscuro */
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.design-two .filter-btn:hover {
+  background: var(--primario1); /* Azul oscuro */
+  color: var(--colorFuentePrimaria); /* Blanco */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Filtros especiales */
+.design-two .special-filters .filter-btn {
+  background: var(--primario1); /* Azul oscuro por defecto */
+  color: var(--colorFuentePrimaria); /* Blanco */
+}
+
+.design-two .special-filters .filter-btn:hover {
+  background: var(--primario2); /* Azul claro */
+}
+
+/* Grid de talles */
+.design-two .sizes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+}
+
+.design-two .size-btn {
+  padding: 8px;
+  text-align: center;
+  background: var(--fondo2); /* Gris claro */
+  border: 2px solid var(--primario1); /* Borde azul oscuro */
+}
+
+/* Animación de entrada para botones */
+.design-two .filter-btn {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .design-two .sidebar {
+    width: 260px;
+    left: -260px;
+  }
+
+  .design-two .sidebar-content {
+    padding: 30px 15px;
+  }
+
+  .design-two .filter-title {
+    font-size: 1.2rem;
+  }
+
+  .design-two .filter-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .reset-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .sizes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+
+  .design-two .size-btn {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-two .sidebar {
+    width: 100%;
+    left: -100%;
+  }
+
+  .design-two .sidebar-content {
+    padding: 20px 10px;
+  }
+
+  .design-two .filter-title {
+    font-size: 1.1rem;
+  }
+
+  .design-two .filter-btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .design-two .reset-btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .design-two .sizes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+
+  .design-two .size-btn {
+    padding: 5px;
+  }
+
+  .design-two .close-icon {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .design-two .sidebar {
+    width: 280px;
+    left: -280px;
+  }
+
+  .design-two .sidebar-content {
+    padding: 35px 18px;
+  }
+}

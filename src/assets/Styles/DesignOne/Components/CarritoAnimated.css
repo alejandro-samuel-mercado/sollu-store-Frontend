@@ -1,0 +1,29 @@
+.design-one .carro-platform {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  margin: 100px  0;
+  width: 100%;
+  height: 300px;
+  align-items: center !important;
+}
+
+.design-one .carro.visible {
+  opacity: 1;
+}
+
+.design-one .platform {
+  background-color: var(--primario1);
+  margin: auto 0;
+  height: 40px;
+  width: 120%;
+  }
+.design-one .carro {
+  position: relative;
+  height: auto;
+  width: 120px;
+  opacity: 0;
+  top:30px;
+  transition: opacity 0.5s ease-in-out;
+  transform-origin: bottom left;
+}

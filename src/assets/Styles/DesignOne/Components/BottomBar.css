@@ -1,0 +1,98 @@
+.design-one .bottombar {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  left: 10px;
+  width: 95%;
+  background: var(--fondo1);
+  border-radius: 40px;
+  border: 1px solid rgba(107, 103, 103, 0.486);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .design-one .bottombar {
+    display: block;
+  }
+}
+
+.design-one .bottombar.hidden {
+  transform: translateY(100%);
+}
+
+.design-one .bottombar-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.design-one .bottombar-nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: var(--fuenteSecundaria), "Arial", sans-serif;
+  color: var(--primario1);
+  transition: color 0.2s ease, transform 0.2s ease;
+  position: relative;
+  padding: 8px;
+}
+
+.design-one .bottombar-nav-link i {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  transition: transform 0.3s ease;
+}
+
+.design-one .bottombar-nav-link span {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.design-one .bottombar-nav-link:hover,
+.design-one .bottombar-nav-link.active {
+  background: rgba(0, 0, 0, 0.171) !important;
+  border-radius: 10px;
+  padding: 5px !important;
+  color: var(--secundario2);
+}
+
+.design-one .bottombar-nav-link:hover i,
+.design-one .bottombar-nav-link.active i {
+}
+
+.design-one .bottombar-nav-link:hover span,
+.design-one .bottombar-nav-link.active span {
+  opacity: 1;
+}
+
+.design-one .bottombar-nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: #00d4ff;
+  border-radius: 50%;
+  animation: pulseDot 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.5);
+    opacity: 0.7;
+  }
+}

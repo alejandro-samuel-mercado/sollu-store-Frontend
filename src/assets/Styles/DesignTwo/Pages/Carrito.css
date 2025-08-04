@@ -1,0 +1,428 @@
+/* Contenedor principal */
+.design-two .carrito-container {
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background: linear-gradient(135deg, var(--fondo1) 60%, var(--fondo2) 100%); /* Gradiente sutil */
+  padding: 100px 20px; /* Más espacio para respirar */
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" como fuente primaria */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Para elementos decorativos */
+}
+
+/* Elemento decorativo de fondo */
+.design-two .carrito-container::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: var(--cuarto); /* #85ee8562 - Verde claro translúcido */
+  border-radius: 50%;
+  top: -50px;
+  left: -50px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Encabezado */
+.design-two .carrito-header {
+  text-align: center;
+  margin-bottom: 40px; /* Más espacio debajo */
+  position: relative;
+  z-index: 1;
+}
+
+/* Título del encabezado */
+.design-two .carrito-header h1 {
+  font-size: 2.8rem; /* Más grande para destacar */
+  color: var(--primario1); /* #485295 - Azul oscuro para contraste */
+  font-weight: 700; /* Más peso para impacto */
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+  border-radius: 8px;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-two .carrito-header h1:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Forma decorativa debajo del título */
+.design-two .header-shape {
+  width: 140px; /* Más ancho para destacar */
+  height: 6px; /* Más grueso */
+  background: linear-gradient(to right, var(--secundario1), var(--secundario2)); /* Gradiente verde */
+  margin: 10px auto 0;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido principal */
+.design-two .carrito-content {
+  max-width: 900px; /* Ancho más amplio */
+  width: 100%;
+  background: rgba(255, 255, 255, 0.747); /* Fondo blanco semitransparente */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.13);
+  position: relative;
+  z-index: 1;
+}
+
+/* Mensaje (sin autenticación o carrito vacío) */
+.design-two .message {
+  font-size: 1.2rem;
+  color: var(--secundario2); /* #2e8b57 - Verde oscuro para destacar */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  text-align: center;
+  padding: 25px;
+  background: var(--fondo2); /* #f5f5f5 - Fondo gris claro */
+  border: 2px dashed var(--secundario1); /* #50c878 - Borde punteado verde */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 20px 0;
+}
+
+/* Lista de carrito */
+.design-two .carrito-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+/* Elemento del carrito */
+.design-two .carrito-item {
+  font-family: var(--fuenteSecundaria);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, var(--fondo1), var(--fondo2)); /* Gradiente sutil */
+  border: 1px solid var(--fondo3); /* #e6e1e1 - Borde claro */
+  border-left: 5px solid var(--primario1); /* #485295 - Borde lateral azul */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.151),0 3px 10px rgba(0, 0, 0, 0.151);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.design-two .carrito-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.39);
+  background: linear-gradient(to right, #fff, var(--fondo3)); /* Cambio al hover */
+}
+
+/* Elemento sin stock */
+.design-two .carrito-item[style*="background-color: #ffcccc"] {
+  border-left: 5px solid var(--secundario2); /* #2e8b57 - Verde oscuro para sin stock */
+}
+
+/* Imagen del producto */
+.design-two .item-image img {
+  width: 100px; /* Más grande para destacar */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  border: 2px solid var(--primario2); /* #7cbcfc - Azul claro */
+  transition: transform 0.3s ease;
+}
+
+.design-two .item-image img:hover {
+  transform: scale(1.1);
+}
+
+/* Detalles del producto */
+.design-two .item-details {
+    font-family: var(--fuenteSecundaria);
+  flex: 1;
+  padding: 10px 0;
+}
+
+.design-two .item-details h3 {
+  font-size: 1.4rem; /* Más grande */
+  color: var(--terciario); /* #333333 - Gris oscuro */
+  margin: 0 0 8px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.design-two .item-details .price {
+  display: flex;
+  font-size: 1.3rem;
+  color: var(--primario1);
+  font-family: var(--fuenteSecundaria), sans-serif; 
+  font-weight: 600;
+  width: 110px;
+  margin: 5px auto;
+  justify-content: center;
+  background: rgba(72, 82, 149, 0.1);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.design-two .item-details p {
+  font-size: 1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin: 5px 0;
+}
+
+.design-two .stock-warning {
+  font-size: 1rem;
+  color: var(--secundario2); /* #2e8b57 - Verde oscuro */
+  font-weight: 600;
+  background: rgba(46, 139, 87, 0.1); /* Fondo sutil verde */
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Botón de eliminación */
+.design-two .carrito-container  .delete-btn {
+  background: var(--secundario2); /* #2e8b57 - Verde oscuro */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .carrito-container .delete-btn:hover {
+  background: var(--secundario1); /* #50c878 - Verde claro */
+  transform: scale(1.15) rotate(90deg); /* Rotación para dinamismo */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Botón de compra */
+.design-two .carrito-container .buy-btn {
+  background: linear-gradient(to right, var(--primario1), var(--primario2)); /* Gradiente azul */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+  border: none;
+  border-radius: 8px;
+  padding: 14px 30px; /* Más grande */
+  font-family: var(--fuentePrimaria), sans-serif; /* "Gugi" */
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.design-two .carrito-container .buy-btn:hover {
+  background: linear-gradient(to right, var(--primario2), var(--primario1)); /* Gradiente invertido */
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal */
+.design-two .carrito-container .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100%;
+  align-items: start !important;
+  padding-top: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  z-index: 1000;
+}
+
+.design-two .carrito-container .modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  width: auto;
+  height:auto;
+  max-height: 90vh;
+  border: 1px solid var(--primario2); /* #7cbcfc - Borde azul claro */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+}
+
+.design-two .carrito-container .modal-close {
+  background: var(--secundario2); /* #2e8b57 - Verde oscuro */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.design-two .carrito-container .modal-close:hover {
+  background: var(--secundario1); /* #50c878 - Verde claro */
+  transform: scale(1.1) rotate(90deg);
+}
+
+/* Animación de entrada del modal */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .design-two .carrito-container {
+    padding: 80px 15px;
+  }
+
+
+  .design-two .carrito-header h1 {
+    font-size: 2.2rem;
+    padding: 8px 15px;
+  }
+
+  .design-two .header-shape {
+    width: 100px;
+  }
+
+  .design-two .carrito-content {
+    padding: 15px;
+  }
+
+  .design-two .carrito-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .design-two .item-image img {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .design-two .item-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .design-two .item-details .price {
+    font-size: 1.1rem;
+  }
+
+  .design-two .item-details p {
+    font-size: 0.9rem;
+  }
+
+  .design-two  .carrito-container .delete-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .design-two  .carrito-container .buy-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .design-two  .carrito-container .modal-content {
+    padding: 20px;
+    max-width: 90%;
+  }
+  .design-two .carrito-container .modal-overlay {
+  padding-top: 80px;
+}
+
+  
+}
+
+@media (max-width: 480px) {
+  .design-two .carrito-header h1 {
+    font-size: 1.8rem;
+    padding: 6px 12px;
+  }
+
+  .design-two .header-shape {
+    width: 80px;
+    height: 4px;
+  }
+
+  .design-two .carrito-item {
+    padding: 10px;
+  }
+
+  .design-two .item-image img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .design-two .item-details h3 {
+    font-size: 1.1rem;
+  }
+
+  .design-two .item-details .price {
+    font-size: 1rem;
+  }
+
+  .design-two .item-details p {
+    font-size: 0.85rem;
+  }
+
+  .design-two .stock-warning {
+    font-size: 0.8rem;
+  }
+
+  .design-two  .carrito-container .delete-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+  }
+
+  .design-two  .carrito-container .buy-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .message {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
+
+@media (max-width:400px){
+
+.design-two .carrito-container .modal-content {
+  padding:50px 10px;
+
+}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .design-two .carrito-content {
+    max-width: 700px;
+  }
+}

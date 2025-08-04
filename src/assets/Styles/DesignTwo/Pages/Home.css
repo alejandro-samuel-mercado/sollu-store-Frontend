@@ -1,0 +1,61 @@
+.design-two .home {
+  min-height: 100vh; 
+}
+
+.design-two .content-below {
+  margin-top: 800px; 
+  padding: 0 ;
+}
+
+
+
+@media (max-width: 1100px) {
+ .design-two .content-below {
+    margin-top: 680px;
+    padding: 0 ;
+  }
+}
+
+@media (max-width: 900px) {
+  .design-two .content-below {
+    margin-top: 600px;
+    padding: 0 ;
+  }
+}
+
+@media (max-width: 768px) {
+ .design-two .content-below {
+    margin-top: 500px;
+    padding: 0 ;
+  }
+}
+
+
+@media (max-width: 660px) {
+  .design-two .content-below {
+    margin-top: 450px;
+    padding: 0 ;
+  }
+}
+
+@media (max-width: 570px) {
+  .design-two .content-below {
+    margin-top: 420px;
+    padding: 0 ;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .design-two .content-below {
+    margin-top: 400px;
+    padding: 0 ;
+  }
+}
+
+@media (max-width: 400px) {
+  .design-two .content-below {
+    margin-top: 350px;
+    padding: 0 ;
+  }
+}

@@ -1,0 +1,219 @@
+/* Contenedor principal */
+.design-two .categorias-container {
+  max-width: 1400px; /* Ancho máximo más pequeño */
+  margin: 0 auto; /* Centrado */
+  padding: 120px 1rem; /* Espaciado interno más ligero */
+  background: var(--fondo1); /* Fondo blanco */
+  font-family: var(--fuentePrimaria), sans-serif; /* Usamos la fuente Jua */
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+}
+
+/* Encabezado */
+.design-two .categorias-header {
+  text-align: center; /* Centrado */
+  margin-bottom: 3rem; /* Espacio debajo */
+  position: relative;
+}
+
+/* Título del encabezado */
+.design-two .header-title {
+  font-size: 2.5rem; /* Tamaño más pequeño y elegante */
+  color: var(--terciario); /* Color gris oscuro */
+  text-transform: uppercase; /* Estilo común */
+  font-weight: 400; /* Peso normal */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  animation: fadeInDown 0.8s ease-out; /* Animación suave */
+}
+
+/* Forma decorativa debajo del título */
+.design-two .header-shape {
+  width: 120px; /* Ancho más pequeño */
+  height: 4px; /* Altura más delgada */
+  background: var(--secundario1); /* Color verde claro */
+  margin: 0.5rem auto 0; /* Centrado con espacio arriba */
+}
+
+/* Cuadrícula de categorías */
+.design-two .categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Cuadrícula responsiva */
+  gap: 2rem; /* Espacio entre tarjetas */
+  padding: 0 2rem; /* Espaciado lateral */
+}
+
+/* Tarjeta de categoría */
+.design-two .categoria-card {
+  text-decoration: none; /* Sin subrayado */
+  display: block;
+  background: var(--fondo1); /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados suaves */
+  overflow: hidden; /* Para evitar desbordes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  animation: cardAppear 0.6s ease-out forwards; /* Animación de entrada */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.178), 0 6px 16px rgba(0, 0, 0, 0.178); /* Sombra suave al hacer hover */
+
+}
+
+/* Efecto hover para la tarjeta */
+.design-two .categoria-card:hover {
+  transform: translateY(-5px); /* Elevación sutil */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.37); /* Sombra suave al hacer hover */
+}
+
+/* Contenedor de la forma de la categoría */
+.design-two .categoria-shape {
+  position: relative;
+  width: 100%;
+  height: 240px; /* Altura más pequeña */
+}
+
+/* Contenido de la tarjeta */
+.design-two .categoria-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.05); /* Fondo gris claro */
+  transition: background 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para el contenido */
+.design-two .categoria-card:hover .categoria-content {
+  background: rgba(0, 0, 0, 0.1); /* Fondo más oscuro al hacer hover */
+}
+
+/* Título de la categoría */
+.design-two .categoria-content h2 {
+  font-size: 2rem; /* Tamaño de fuente más pequeño */
+  color: var(--colorFuentePrimaria); /* Color gris oscuro */
+  text-transform: uppercase; /* Estilo común */
+  font-weight: 600; /* Peso normal */
+  margin-bottom: 0.5rem; /* Espacio debajo */
+  z-index: 1; /* Asegura que esté por encima de la imagen */
+}
+
+/* Imagen de la categoría */
+.design-two .categoria-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el espacio */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.9; /* Opacidad inicial */
+  transition: opacity 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para la imagen */
+.design-two .categoria-card:hover .categoria-content img {
+  opacity: 1; /* Opacidad completa al hacer hover */
+}
+
+/* Mensaje de "No hay categorías" */
+.design-two .no-categorias {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+  color: var(--terciario); /* Color gris oscuro */
+  background: rgba(0, 0, 0, 0.05); /* Fondo gris claro */
+  animation: fadeIn 0.8s ease-out; /* Animación suave */
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries para adaptabilidad */
+
+/* Móviles pequeños (< 480px) */
+@media (max-width: 480px) {
+ .design-two .categorias-container {
+    padding: 1rem 0.5rem; /* Reducimos el padding */
+  }
+
+ .design-two .categorias-grid {
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 1rem; /* Espacio más pequeño */
+    padding: 0 1rem; /* Espaciado lateral más pequeño */
+  }
+
+  .design-two .categoria-shape {
+    height: 200px; /* Altura más pequeña */
+  }
+
+ .design-two .categoria-content h2 {
+    font-size: 1.2rem; /* Reducimos el tamaño del título */
+  }
+
+ .design-two .header-title {
+    font-size: 2rem; /* Reducimos el tamaño del título */
+  }
+
+ .design-two .header-shape {
+    width: 80px; /* Ancho más pequeño */
+  }
+
+  .design-two .no-categorias {
+    font-size: 1rem; /* Reducimos el tamaño del mensaje */
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+ .design-two .categorias-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Ajustamos el tamaño de las tarjetas */
+    gap: 1.5rem; /* Espacio más pequeño */
+  }
+
+ .design-two .categoria-shape {
+    height: 220px; /* Altura más pequeña */
+  }
+
+ .design-two .categoria-content h2 {
+    font-size: 1.3rem; /* Reducimos el tamaño del título */
+  }
+
+ .design-two .header-title {
+    font-size: 2.2rem; /* Reducimos el tamaño del título */
+  }
+}
+
+/* Pantallas medianas (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .design-two .categorias-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Ajustamos el tamaño de las tarjetas */
+  }
+
+  .design-two .categoria-shape {
+    height: 230px; /* Altura más pequeña */
+  }
+}
+
+/* Pantallas grandes (> 1024px) */
+@media (min-width: 1025px) {
+ .design-two .categorias-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Tamaño original */
+  }
+}

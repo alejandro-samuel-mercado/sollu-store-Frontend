@@ -1,0 +1,378 @@
+/* Contenedor principal */
+.design-two .success-container {
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background: var(--fondo1); /* #f5f1f1 - Fondo gris muy claro */
+  padding: 100px 20px; /* Padding similar al dashboard */
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" como fuente primaria */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Encabezado */
+.design-two .success-header {
+  text-align: center;
+  margin-bottom: 30px; /* Espacio debajo como en el dashboard */
+}
+
+/* Título del encabezado */
+.design-two .success-title {
+  font-size: 2.5rem; /* Tamaño elegante */
+  color: var(--terciario); /* #333333 - Gris oscuro para contraste */
+  font-weight: 600; /* Peso fuerte como los títulos del dashboard */
+  text-transform: uppercase; /* Estilo consistente */
+  border-bottom: 2px solid var(--fondo3); /* #e6e1e1 - Línea inferior clara */
+  padding-bottom: 10px;
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.design-two .success-title:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+/* Forma decorativa debajo del título */
+.design-two .success-container .header-shape {
+  width: 120px; /* Ancho similar al header-shape */
+  height: 4px; /* Altura delgada */
+  background: var(--secundario1); /* #50c878 - Verde claro */
+  margin: 0.5rem auto 0; /* Centrado con espacio arriba */
+  border-radius: 2px;
+}
+
+/* Contenido principal */
+.design-two .success-container .success-content {
+  max-width: 600px; /* Ancho más pequeño para centrar el mensaje */
+  background: #fff; /* Fondo blanco puro */
+  border-radius: 8px;
+  padding: 25px;
+  border: 1px solid var(--fondo3); /* #e6e1e1 - Borde claro */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  text-align: center;
+}
+
+/* Mensaje de éxito */
+.design-two .success-container .success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ícono de éxito */
+.design-two .success-container .check-icon {
+  font-size: 3rem;
+  color: var(--secundario1); /* #50c878 - Verde claro para éxito */
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.design-two .check-icon:hover {
+  transform: scale(1.1); /* Efecto de escala */
+}
+
+/* Subtítulo de éxito */
+.design-two .success-container .success-subtitle {
+  font-size: 1.8rem;
+  color: var(--terciario); /* #333333 - Gris oscuro */
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" */
+}
+
+/* Texto de éxito */
+.design-two .success-container .success-text {
+  font-size: 1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Detalles del pedido */
+.design-two .order-details {
+  margin-bottom: 25px;
+}
+
+.design-two .order-details p {
+  font-size: 1rem;
+  color: var(--terciario); /* #333333 - Gris oscuro */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin: 0.5rem 0;
+}
+
+.design-two .order-details strong {
+  color: var(--primario1); /* #485295 - Azul oscuro para destacar */
+}
+
+/* Acciones de éxito */
+.design-two .success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* Espacio como en modal-footer */
+  flex-wrap: wrap;
+}
+
+/* Botones de éxito */
+.design-two .continue-shopping-btn,
+.design-two .back-cart-btn {
+  padding: 10px 20px; /* Tamaño como los botones del dashboard */
+  border: none;
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+}
+
+.design-two .continue-shopping-btn {
+  background: var(--primario1); /* #485295 - Azul oscuro */
+}
+
+.design-two .continue-shopping-btn:hover {
+  background: var(--primario2); /* #7cbcfc - Azul claro */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .back-cart-btn {
+  background: var(--secundario2); /* #2e8b57 - Verde oscuro */
+}
+
+.design-two .back-cart-btn:hover {
+  background: var(--secundario1); /* #50c878 - Verde claro */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de carga */
+.design-two .success-container .loading-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.design-two .success-container .spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--fondo2); /* #f5f5f5 - Gris claro */
+  border-top: 4px solid var(--primario2); /* #7cbcfc - Azul claro */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.design-two .sr-only {
+  font-size: 1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-top: 15px;
+}
+
+/* Mensaje de error */
+.design-two .success-container .error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ícono de error */
+.design-two .success-container .error-icon {
+  font-size: 3rem;
+  color: var(--secundario2); /* #2e8b57 - Verde oscuro para error */
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.design-two .success-container .error-icon:hover {
+  transform: scale(1.1); /* Efecto de escala */
+}
+
+/* Subtítulo de error */
+.design-two .success-container .error-subtitle {
+  font-size: 1.8rem;
+  color: var(--terciario); /* #333333 - Gris oscuro */
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" */
+}
+
+/* Texto de error */
+.design-two .success-container .error-text {
+  font-size: 1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Botón de reintento */
+.design-two .success-container.retry-btn {
+  padding: 10px 20px; /* Tamaño como los botones del dashboard */
+  border: none;
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  background: var(--primario1); /* #485295 - Azul oscuro */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+}
+
+.design-two .success-container .retry-btn:hover {
+  background: var(--primario2); /* #7cbcfc - Azul claro */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.design-two .success-footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-top: 30px;
+}
+
+.design-two .success-footer a {
+  color: var(--primario2); /* #7cbcfc - Azul claro */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.design-two .success-footer a:hover {
+  color: var(--primario1); /* #485295 - Azul oscuro */
+}
+
+/* Animaciones */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .design-two .success-container {
+    padding: 20px 15px; /* Padding reducido */
+  }
+
+  .design-two .success-container .success-title {
+    font-size: 2rem; /* Tamaño reducido */
+    margin-bottom: 20px;
+  }
+
+  .design-two .success-container .header-shape {
+    width: 80px; /* Ancho más pequeño */
+  }
+
+  .design-two .success-container .success-content {
+    padding: 15px; /* Padding reducido */
+  }
+
+  .design-two .success-container .check-icon,
+  .design-two .success-container .error-icon {
+    font-size: 2.5rem; /* Ícono más pequeño */
+  }
+
+  .design-two .success-container .success-subtitle,
+  .design-two .success-container .error-subtitle {
+    font-size: 1.5rem; /* Subtítulo más pequeño */
+    margin-bottom: 10px;
+  }
+
+  .design-two .success-container .success-text,
+  .design-two .success-container .error-text {
+    font-size: 0.9rem; /* Texto más pequeño */
+    margin-bottom: 20px;
+  }
+
+  .design-two .order-details p {
+    font-size: 0.9rem;
+  }
+
+  .design-two .success-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .design-two .continue-shopping-btn,
+  .design-two .back-cart-btn,
+  .design-two .retry-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .success-container .spinner {
+    width: 30px;
+    height: 30px;
+  }
+
+  .design-two .sr-only {
+    font-size: 0.9rem;
+  }
+
+  .design-two .success-footer {
+    font-size: 0.85rem;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-two .success-title {
+    font-size: 1.8rem; /* Aún más pequeño */
+    margin-bottom: 15px;
+  }
+
+  .design-two .check-icon,
+  .design-two .error-icon {
+    font-size: 2rem;
+  }
+
+  .design-two .success-container .success-subtitle,
+  .design-two .success-container .error-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .design-two .success-container .success-text,
+  .design-two .success-container .error-text {
+    font-size: 0.85rem;
+  }
+
+  .design-two .order-details p {
+    font-size: 0.85rem;
+  }
+
+  .design-two .continue-shopping-btn,
+  .design-two .back-cart-btn,
+  .design-two .retry-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .design-two .success-footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .design-two .success-container {
+    padding: 25px 20px;
+  }
+
+  .design-two .success-content {
+    max-width: 500px; /* Ajustamos el ancho máximo */
+  }
+}

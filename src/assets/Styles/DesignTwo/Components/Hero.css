@@ -1,0 +1,144 @@
+
+.design-two .hero-container {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  padding-top: 20px;
+  z-index: 10; 
+}
+
+.design-two .hero-sosten {
+display:none
+}
+.design-two .hero-sosten img {
+ display:none
+}
+
+/* Contenedor de la imagen principal */
+.design-two .hero-div {
+  width: 100%; /* Ocupa todo el ancho */
+  height: 600px; /* Altura fija para un look consistente */
+  overflow: hidden; /* Evita desbordamientos */
+}
+
+/* Placeholder mientras carga la imagen */
+.design-two .hero-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5; /* Fondo claro, similar al navbar */
+  color: #333; /* Color de texto oscuro para contraste */
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 0; /* Sin bordes redondeados para un look más limpio */
+}
+
+/* Imagen principal del hero */
+.design-two .video-hero {
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100%; /* Ocupa toda la altura del contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  display: block; /* Asegura que se muestre como bloque */
+}
+
+/* Animaciones */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 1100px) {
+
+ .design-two  .hero-div {
+    width: 100%;
+    height: 500px; 
+  }
+  .design-two .video-hero {
+  width: 100%}
+
+
+}
+
+
+/* Responsividad */
+@media (max-width: 991px) {
+ .design-two  .hero-container {
+    top: 45px;
+  }
+
+ .design-two  .hero-div {
+    height: 450px; 
+  }
+
+
+}
+
+
+/* Responsividad */
+@media (max-width: 840px) {
+ .design-two  .hero-div {
+    height: 400px; 
+  }
+ 
+
+}
+
+@media (max-width:768px) {
+ .design-two  .hero-div {
+    height: 350px; 
+  }
+
+}
+
+
+@media (max-width:650px) {
+ .design-two  .hero-div {
+    height: 300px; 
+  }
+
+}
+@media (max-width: 576px) {
+   .design-two  .hero-container {
+    top: 30px;
+  }
+ .design-two  .hero-div {
+    height: 280px; 
+  }
+ 
+ .design-two  .hero-placeholder {
+    font-size: 0.9rem; /* Texto más pequeño en móviles */
+  }
+}
+
+@media (max-width: 546px) {
+ .design-two  .hero-div {
+    height: 260px; 
+  }
+ 
+}
+
+@media (max-width: 500px) {
+ .design-two  .hero-div {
+    height: 220px; 
+  }
+ 
+}
+
+@media (max-width: 400px) {
+ .design-two  .hero-div {
+    height: 180px; 
+  }
+ 
+}

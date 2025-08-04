@@ -1,0 +1,227 @@
+/* Contenedor principal */
+.design-one .failure-container {
+  min-height: 100vh;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--fondo1) 0%, var(--fondo3) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Header */
+.design-one .failure-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.design-one .failure-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--terciario);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeInDown 1s ease-out;
+}
+
+.design-one .failure-container .header-shape {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 15px;
+  background: var(--secundario2);
+  border-radius: 50%;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Contenido */
+.design-one .failure-content {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Mensaje de error */
+.design-one .failure-container .error-message {
+  background: var(--fondo1);
+  font-family: var(--fuenteSecundaria);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.5s ease-out;
+}
+
+.design-one .failure-container .error-icon {
+  font-size: 3rem;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.design-one .error-subtitle {
+  font-family: var(--fuenteSecundaria);
+  font-size: 2rem;
+  color: var(--terciario);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.design-one .error-text {
+  font-family: var(--fuenteSecundaria);
+  font-size: 1.2rem;
+  color: var(--fondo5);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Acciones */
+.design-one .failure-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.design-one .retry-btn,
+.design-one .support-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.design-one .failure-container .retry-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.design-one .failure-container .retry-btn:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+.design-one .support-btn {
+  background: var(--primario2);
+  color: #fff;
+}
+
+.design-one .support-btn:hover {
+  background: var(--primario1);
+  transform: scale(1.05);
+}
+
+/* Footer */
+.design-one .failure-footer {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--fondo5);
+  font-family: var(--fuenteSecundaria);
+  font-size: 0.9rem;
+  padding: 20px;
+  background: var(--fondo1);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.design-one .failure-footer a {
+  color: var(--primario2);
+  text-decoration: none;
+  font-family: var(--fuenteSecundaria);
+}
+
+.design-one .failure-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .design-one .failure-container {
+    padding: 80px 20px;
+  }
+
+  .design-one .failure-title {
+    font-size: 2.5rem;
+  }
+
+  .design-one .failure-container .error-message {
+    padding: 20px;
+  }
+
+  .design-one .failure-container .error-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .design-one .failure-container .error-text {
+    font-size: 1rem;
+  }
+
+  .design-one .failure-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .design-one .retry-btn,
+  .design-one .support-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .design-one .failure-footer {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-one .failure-title {
+    font-size: 2rem;
+  }
+
+  .design-one .failure-container .error-message {
+    padding: 15px;
+  }
+
+  .design-one .failure-container .error-icon {
+    font-size: 2.5rem;
+  }
+}

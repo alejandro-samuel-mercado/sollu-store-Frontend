@@ -1,0 +1,320 @@
+.design-one .carrito-container .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.design-one .carrito-container .modal-content {
+  background-color: var(--fondo1);
+  padding: 60px;
+  border-radius: 5px;
+  width: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.design-one .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.design-one .container-pago {
+  width: 100%;
+  height: 85%;
+  margin: 0 auto;
+  padding: 10px 40px;
+  background: var(--fondo1);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(43, 42, 42, 0.212);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.design-one .head-form-step {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--terciario);
+  margin-bottom: 20px;
+  padding: 10px;
+  justify-content: center;
+  border-radius: 8px;
+  gap: 30px;
+}
+.design-one .step {
+  border-right-style: solid;
+  padding: 0 auto;
+  justify-content: center;
+}
+.design-one .active {
+  background-color: var(--fondo4) !important;
+  color: rgb(255, 252, 252);
+}
+.design-one .container-pago form {
+  font-family: var(--fuenteSecundaria);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.design-one .form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.design-one .form-group label {
+  font-size: 1.5rem !important;
+}
+
+.design-one .form-group.datos h4 {
+  font-size: 1.2rem;
+}
+
+.design-one .container-pago label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--terciario);
+}
+
+.design-one .container-pago input,
+select,
+textarea {
+  width: 80%;
+  max-height: 2rem;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: var(--fondo1);
+  color: var(--terciario);
+}
+
+.design-one .container-pago select {
+  padding: 5px 0;
+}
+
+.design-one .container-pago input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+.design-one .container-pago button {
+  width: 50%;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--colorFuentePrimaria);
+  background: var(--primario1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.design-one .container-pago button:hover {
+  background: #0056b3;
+}
+
+.design-one .container-pago button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.design-one .step-buttons {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  bottom: 20px;
+  gap: 30px;
+  left: 0;
+}
+
+.design-one .step-buttons button {
+  width: 30%;
+  background-color: var(--primario1) !important;
+  color: var(--colorFuentePrimaria);
+}
+
+.design-one .step-buttons button:first-child {
+  background: #6c757d;
+}
+
+.design-one .step-buttons button:first-child:hover {
+  background: #5a6268;
+}
+
+.design-one .container-pago p {
+  font-size: 14px;
+  color: rgb(255, 0, 0);
+  margin: 5px 0;
+}
+
+.design-one .carrito-item-compra-pago {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  list-style: none;
+  border-bottom: 1px solid #7d7c85;
+}
+
+.design-one .carrito-item-compra-pago p {
+  font-weight: 500;
+}
+.design-one .form-group .react-datepicker__navigation {
+  width: 40px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.design-one .price-message {
+  font-family: var(--fuenteTerciaria);
+  color: var(--terciario) !important;
+  white-space: pre-wrap;
+}
+
+.design-one .container-pago .error-message {
+  position: absolute;
+  display: flex;
+  bottom: 70px;
+  left: 30%;
+}
+
+@media (max-width: 900px) {
+  .design-one .carrito-container .modal-content {
+    padding: 40px;
+  }
+
+  .design-one .container-pago {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .design-one .head-form-step {
+    font-size: 16px;
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+  .design-one .step {
+    border-right-style: solid;
+    padding: 0 auto;
+    justify-content: center;
+  }
+
+  .design-one .container-pago .error-message {
+    left: 12%;
+  }
+}
+
+@media (max-width: 768px) {
+  .design-one .carrito-container .modal-content {
+    padding: 40px;
+    width: 80%;
+  }
+
+  .design-one .container-pago {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .design-one .head-form-step {
+    font-size: 14px;
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+  .design-one .step {
+    border-right-style: solid;
+    padding: 0 auto;
+    justify-content: center;
+  }
+
+  .design-one .container-pago .error-message {
+    left: 12%;
+  }
+}
+
+@media (max-width: 600px) {
+  .design-one .carrito-container .modal-content {
+    margin: 0;
+    min-width: 100%;
+    padding: 30px 20px;
+  }
+
+  .design-one .container-pago {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .design-one .head-form-step {
+    font-size: 13px;
+    margin-bottom: 30px;
+    gap: 10px;
+    max-width: 30% !important;
+  }
+  .design-one .step {
+    border-right-style: solid;
+    padding: 0 auto;
+    justify-content: center;
+  }
+
+  .design-one .container-pago .error-message {
+    left: 12%;
+  }
+}
+
+@media (max-width: 400px) {
+  .design-one .head-form-step {
+    margin-bottom: 30px;
+    font-size: 10px;
+    padding: 1px;
+    gap: 0px;
+    max-width: 27% !important;
+  }
+  .design-one .container-pago {
+    width: 100%;
+    padding: 20px;
+  }
+  .design-one .step {
+    padding: 0;
+  }
+}
+
+@media (max-height: 1100px) {
+  .design-one .carrito-container .modal-content {
+    height: 70%;
+  }
+}
+
+@media (max-height: 900px) {
+  .design-one .carrito-container .modal-content {
+    height: 80%;
+  }
+}
+
+@media (max-height: 700px) {
+  .design-one .carrito-container .modal-content {
+    height: 90%;
+  }
+}

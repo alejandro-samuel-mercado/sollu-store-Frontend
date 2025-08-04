@@ -1,0 +1,243 @@
+/* Contenedor principal */
+.design-two .failure-container {
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background: var(--fondo1); /* #f5f1f1 - Fondo gris muy claro */
+  padding: 100px 20px;
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" como fuente primaria */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Encabezado */
+.design-two .failure-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Título del encabezado */
+.design-two .failure-title {
+  font-size: 2.5rem;
+  color: var(--terciario); /* #333333 - Gris oscuro para contraste */
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--fondo3); /* #e6e1e1 - Línea inferior clara */
+  padding-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.design-two .failure-title:hover {
+  transform: scale(1.05);
+}
+
+/* Forma decorativa debajo del título */
+.design-two .header-shape {
+  width: 120px;
+  height: 4px;
+  background: var(--secundario2); /* #2e8b57 - Verde oscuro para indicar fallo */
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Contenido principal */
+.design-two .failure-content {
+  max-width: 600px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  border: 1px solid var(--fondo3); /* #e6e1e1 - Borde claro */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+/* Mensaje de error */
+.design-two .error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ícono de error */
+.design-two .error-icon {
+  font-size: 3rem;
+  color: var(--secundario2); /* #2e8b57 - Verde oscuro para fallo */
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.design-two .error-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Subtítulo de error */
+.design-two .error-subtitle {
+  font-size: 1.8rem;
+  color: var(--terciario); /* #333333 - Gris oscuro */
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" */
+}
+
+/* Texto de error */
+.design-two .error-text {
+  font-size: 1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Acciones de fallo */
+.design-two .failure-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Botones */
+.design-two .retry-btn,
+.design-two .support-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+}
+
+.design-two .retry-btn {
+  background: var(--primario1); /* #485295 - Azul oscuro */
+}
+
+.design-two .retry-btn:hover {
+  background: var(--primario2); /* #7cbcfc - Azul claro */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .support-btn {
+  background: var(--secundario2); /* #2e8b57 - Verde oscuro */
+}
+
+.design-two .support-btn:hover {
+  background: var(--secundario1); /* #50c878 - Verde claro */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.design-two .failure-footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-top: 30px;
+}
+
+.design-two .failure-footer a {
+  color: var(--primario2); /* #7cbcfc - Azul claro */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.design-two .failure-footer a:hover {
+  color: var(--primario1); /* #485295 - Azul oscuro */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .design-two .failure-container {
+    padding: 20px 15px;
+  }
+
+  .design-two .failure-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .design-two .header-shape {
+    width: 80px;
+  }
+
+  .design-two .failure-content {
+    padding: 15px;
+  }
+
+  .design-two .error-icon {
+    font-size: 2.5rem;
+  }
+
+  .design-two .error-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .design-two .error-text {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .design-two .failure-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .design-two .retry-btn,
+  .design-two .support-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .failure-footer {
+    font-size: 0.85rem;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-two .failure-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .design-two .error-icon {
+    font-size: 2rem;
+  }
+
+  .design-two .error-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .design-two .error-text {
+    font-size: 0.85rem;
+  }
+
+  .design-two .retry-btn,
+  .design-two .support-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .design-two .failure-footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .design-two .failure-container {
+    padding: 25px 20px;
+  }
+
+  .design-two .failure-content {
+    max-width: 500px;
+  }
+}

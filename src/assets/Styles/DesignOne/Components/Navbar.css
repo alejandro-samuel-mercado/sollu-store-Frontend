@@ -1,0 +1,308 @@
+/* Estilo base de la navbar */
+.design-one .navbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--primario1);
+  font-size: 1.2rem;
+  margin: 2% 6% 0 6%;
+  padding: 5px;
+  border-radius: 15px;
+  border: 4px solid #00b89363;
+  color: var(--colorFuentePrimaria);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: calc(100% - 12%); /* Ajuste para márgenes laterales */
+  transition: transform 0.3s ease-in-out, padding 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+/* Efecto de flotación al hacer scroll */
+.design-one .floating {
+  background-color: rgba(92, 154, 170, 0.603);
+}
+
+/* Ocultar la barra al hacer scroll hacia abajo */
+.design-one .hidden {
+  transform: translateY(-50%);
+}
+/* Contenedor principal de los ítems */
+.design-one .navbar-content {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px; /* Espaciado entre elementos */
+}
+
+/* Logo a la izquierda */
+.design-one .navbar-brand {
+  margin-right: auto;
+}
+
+.design-one .navbar-brand img {
+  width: 130px;
+  transition: width 0.3s ease;
+}
+
+/* Sección izquierda (Home, Categorías) */
+.design-one .navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Estilo de los enlaces */
+.design-one .nav-link {
+  color: var(--colorFuentePrimaria);
+  font-family: var(--fuentePrimaria);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.design-one .nav-link:hover {
+  color: #ff7675;
+}
+
+.design-one .nav-link:focus,
+.design-one .nav-link:active {
+  background-color: transparent !important;
+  color: inherit !important;
+  outline: none;
+}
+
+.design-one .items-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 10px;
+}
+
+/* Enlaces dentro de items-right */
+.design-one .items-right a {
+  color: var(--colorFuentePrimaria);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.design-one .items-right a:hover {
+  color: #ff7675;
+}
+
+/* Iconos de Bootstrap */
+.design-one .bi {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+/* Dropdown para Categorías */
+.design-one .nav-item.dropdown {
+  position: relative; /* Necesario para posicionar el dropdown */
+}
+
+.design-one .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.design-one .dropdown-menu {
+  display: none; /* Oculto por defecto */
+  background-color: var(--fondo1);
+  font-family: var(--fuenteSecundaria);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.445);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  z-index: 1001;
+  padding: 10px 0;
+}
+
+.design-one .dropdown-item {
+  color: var(--secundario1);
+  font-weight: 500;
+  padding: 5px 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.design-one .dropdown-item:hover {
+  color: var(--primario1);
+  background-color: var(--fondo2);
+}
+
+.design-one .menu-btn {
+  color: var(--colorFuentePrimaria);
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+}
+
+.design-one .menu-btn:hover {
+  background-color: #555;
+}
+
+/* Botón del menú expandible */
+.design-one .expandable-btn {
+  background-color: transparent !important;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen del botón expandible */
+.design-one .expandable-btn img {
+  width: 30px;
+  opacity: 1;
+  transition: opacity 0.1s ease; /* Reducir el tiempo de transición para que el cambio sea más rápido */
+}
+
+/* Icono del carrito */
+.design-one .carrito .cart-icon {
+  width: 30px;
+  opacity: 1;
+  transition: opacity 0.1s ease; /* Reducir el tiempo de transición */
+}
+
+/* Efecto hover para los íconos */
+.design-one .expandable-btn img:hover,
+.design-one .carrito .cart-icon:hover {
+  opacity: 0.8;
+}
+
+/* Contenedor del menú expandible */
+.design-one .expandable-menu {
+  position: relative;
+  padding-left: 5px;
+}
+
+/* Contenedor del contenido del menú expandible */
+.design-one .menu-content {
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  width: 250px;
+  background-color: var(--fondo1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.445);
+  color: var(--terciario);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(35px, -10px) !important;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out,
+    transform 0.3s ease-out;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+/* Estado expandido del menú */
+.design-one .menu-content.expanded {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(35px, 20px) !important;
+  max-height: 350px;
+}
+
+/* Enlaces dentro del menú expandido */
+.design-one .menu-content.expanded .nav-link {
+  color: var(--primario1);
+  font-family: var(--fuenteSecundaria);
+  font-weight: 500;
+}
+
+/* Efecto hover para los enlaces del menú expandido */
+.design-one .menu-content.expanded .nav-link:hover {
+  color: var(--secundario1);
+}
+
+/* Lista dentro del menú */
+.design-one .menu-content ul {
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+}
+
+/* Elementos de la lista */
+.design-one .menu-content ul li {
+  padding: 5px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Responsividad */
+@media (max-width: 1000px) {
+  .design-one .navbar-left .nav-item:not(.dropdown) {
+    display: none; /* Ocultar "Home/Productos" en pantallas medianas */
+  }
+
+  .design-one .menu-content .nav-item:not(.dropdown) {
+    display: block; /* Mostrar "Home/Productos" en el menú expandible */
+  }
+}
+
+@media (max-width: 768px) {
+  .design-one .navbar {
+    margin: 0;
+    width: 100%; /* Ocupar todo el ancho */
+    border-radius: 0; /* Sin bordes redondeados en móviles */
+    padding: 8px 10px;
+  }
+
+  .design-one .navbar-brand img {
+    width: 100px;
+    /* Reducir tamaño del logo */
+  }
+
+  .design-one .navbar-left .dropdown {
+    display: none; /* Ocultar "Categorías" en móviles */
+  }
+
+  .design-one .menu-content .dropdown {
+    display: block; /* Mostrar "Categorías" en el menú expandible */
+  }
+
+  .design-one .items-right .nav-link {
+    display: none;
+  }
+
+  .design-one .nav-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-one .navbar {
+    margin: 0;
+    width: 100% !important;
+    padding-left: 0;
+  }
+  .design-one .navbar-brand {
+    padding: 0;
+  }
+
+  .design-one .navbar-brand img {
+    width: 100px;
+    margin-left: -15px;
+  }
+
+  .design-one .items-right {
+    gap: 15px;
+    margin-right: -15px;
+  }
+  .design-one .menu-content {
+    right: 20px;
+  }
+}

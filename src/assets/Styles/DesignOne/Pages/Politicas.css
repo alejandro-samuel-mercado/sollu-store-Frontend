@@ -1,0 +1,213 @@
+.design-one .politicas-container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--fondo1), var(--fondo2));
+  font-family: var(--fuentePrimaria);
+  padding: 120px 20px;
+  overflow: hidden;
+}
+
+.design-one .hero-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(45deg, var(--primario1), var(--primario2));
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(72, 82, 149, 0.3);
+  margin-bottom: 30px;
+}
+
+.design-one .hero-title {
+  font-size: 3.5rem;
+  color: var(--colorFuentePrimaria);
+  margin: 0;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.design-one .hero-subtitle {
+  font-family: var(--fuenteSecundaria);
+  font-size: 1.5rem;
+  color: var(--cuarto);
+  margin: 10px 0;
+}
+
+.design-one .terms-section,
+.design-one .privacy-section {
+  font-family: var(--fuenteSecundaria);
+  padding: 40px 20px;
+  background: var(--fondo3);
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.24), 0 -4px 2px rgba(0, 0, 0, 0.158);
+  margin-bottom: 30px;
+}
+
+.design-one .section-title {
+  font-size: 2.5rem;
+  color: var(--terciario);
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.design-one .intro-text {
+  font-size: 1.2rem;
+  color: var(--terciario);
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.design-one .term-item,
+.design-one .privacy-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: var(--fondo2);
+  border-radius: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.design-one .term-item:hover,
+.design-one .privacy-item:hover {
+  transform: translateY(-5px);
+}
+
+.design-one .term-icon,
+.design-one .privacy-icon {
+  font-size: 2.5rem;
+  color: var(--primario1);
+}
+
+.design-one .term-title,
+.design-one .privacy-title {
+  font-size: 1.8rem;
+  color: var(--terciario);
+  margin-bottom: 10px;
+}
+
+.design-one .term-text,
+.design-one .privacy-text {
+  font-size: 1.1rem;
+  color: var(--terciario);
+  line-height: 1.6;
+}
+
+.design-one .privacy-text a {
+  color: var(--secundario1);
+  text-decoration: underline;
+}
+
+.design-one .footer-section {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(45deg, var(--primario1), var(--primario2));
+  border-radius: 20px;
+  color: var(--colorFuenteSecundaria);
+}
+
+.design-one .footer-section p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.design-one .support-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: var(--secundario1);
+  color: var(--colorFuentePrimaria);
+  border-radius: 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.design-one .support-button:hover {
+  background: var(--secundario2);
+  transform: translateY(-5px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .design-one .politicas-container {
+    padding: 80px 0;
+  }
+  .design-one .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .design-one .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .design-one .section-title {
+    font-size: 2rem;
+  }
+
+  .design-one .term-item,
+  .design-one .privacy-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .design-one .term-title,
+  .design-one .privacy-title {
+    font-size: 1.6rem;
+  }
+
+  .design-one .term-text,
+  .design-one .privacy-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-one .politicas-container {
+    padding: 80px 0;
+  }
+  .design-one .hero-section {
+    width: 100% !important;
+    margin: 0;
+    border-radius: 0 !important;
+  }
+  .design-one .hero-title {
+    font-size: 2rem;
+  }
+
+  .design-one .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .design-one .section-title {
+    font-size: 1.8rem;
+  }
+
+  .design-one .term-title,
+  .design-one .privacy-title {
+    font-size: 1.4rem;
+  }
+
+  .design-one .term-text,
+  .design-one .privacy-text {
+    font-size: 0.9rem;
+  }
+
+  .design-one .footer-section p {
+    font-size: 1.2rem;
+  }
+
+  .design-one .support-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}

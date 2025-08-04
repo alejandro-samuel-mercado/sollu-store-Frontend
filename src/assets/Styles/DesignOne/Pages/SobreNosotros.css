@@ -1,0 +1,324 @@
+.design-one .sobre-nosotros-container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--fondo1), var(--fondo2));
+  font-family: var(--fuentePrimaria);
+  padding: 120px 20px 0 20px;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.design-one .hero-section {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px;
+  width: 80%;
+  background: linear-gradient(45deg, var(--primario1), var(--primario2));
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(72, 82, 149, 0.3);
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.design-one .hero-content {
+  z-index: 1;
+}
+
+.design-one .hero-title {
+  font-size: 3.5rem;
+  color: var(--colorFuentePrimaria);
+  margin: 0;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.design-one .hero-subtitle {
+  font-family: var(--fuenteSecundaria);
+  font-size: 1.5rem;
+  color: var(--cuarto);
+  margin: 10px 0;
+}
+
+.design-one .hero-animation {
+  width: 500px;
+  height: 500px;
+  margin: -10% auto !important;
+  opacity: 0.9;
+}
+
+/* Secciones Generales */
+.design-one .ecommerce-importance,
+.design-one .site-functionality,
+.design-one .objectives-section,
+.design-one .why-choose-us,
+.design-one .footer-section {
+  padding: 40px 20px;
+  margin: auto;
+  max-width: 85% !important;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  background: var(--fondo3);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.24), 0 -4px 2px rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: transform 0.3s ease-out;
+}
+
+.design-one .ecommerce-importance:hover,
+.design-one .site-functionality:hover,
+.design-one .objectives-section:hover,
+.design-one .why-choose-us:hover {
+  transform: translate(20px, -20px);
+}
+
+.design-one .section-title {
+  font-size: 2.5rem;
+  color: var(--terciario);
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.design-one .section-text {
+  font-family: var(--fuenteSecundaria);
+  font-size: 1.3rem;
+  color: var(--terciario);
+  line-height: 1.8;
+  text-align: center;
+}
+
+.design-one .section-animation {
+  width: 300px;
+  height: 300px;
+  margin: -20% auto !important;
+  opacity: 0.9;
+}
+
+.design-one .objectives-section {
+  text-align: center;
+}
+
+.design-one .objectives-list {
+  font-family: var(--fuenteSecundaria);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.design-one .objective-item {
+  background: var(--fondo2);
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.design-one .objective-item:hover {
+  transform: translateY(-5px);
+  background: var(--cuarto);
+}
+
+.design-one .objective-icon {
+  font-size: 2.5rem;
+  color: var(--primario1);
+  margin-bottom: 10px;
+}
+
+/* Por qué Elegirnos */
+.design-one .why-choose-us {
+  flex-direction: column;
+}
+
+.design-one .reasons-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.design-one .reason-item {
+  font-family: var(--fuenteSecundaria);
+  background: var(--fondo2);
+  padding: 20px;
+  border-radius: 15px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.design-one .reason-item:hover {
+  transform: scale(1.05);
+  background: var(--cuarto);
+}
+
+.design-one .reason-icon {
+  font-size: 2.5rem;
+  color: var(--secundario1);
+  margin-bottom: 10px;
+}
+
+.design-one .reason-item h3 {
+  font-size: 1.5rem;
+  color: var(--terciario);
+  margin-bottom: 10px;
+}
+
+.design-one .reason-item p {
+  font-size: 1.1rem;
+  color: var(--terciario);
+}
+
+.design-one .trust-animation {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+/* Footer */
+.design-one .footer-section {
+  font-family: var(--fuenteSecundaria);
+  text-align: center;
+  padding: 15px 20px;
+  background: linear-gradient(45deg, var(--primario1), var(--primario2));
+  border-radius: 20px;
+  color: var(--colorFuenteSecundaria);
+}
+
+.design-one .footer-section p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.design-one .footer-animation {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .design-one .hero-section {
+    padding: 40px 0;
+    width: 100%;
+    margin: auto;
+  }
+  .design-one .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .design-one .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .design-one .hero-animation {
+    width: 200px;
+    height: 200px;
+  }
+
+  .design-one .section-title {
+    font-size: 2rem;
+  }
+
+  .design-one .section-text {
+    font-size: 1.1rem;
+  }
+
+  .design-one .section-animation {
+    width: 200px;
+    height: 200px;
+  }
+
+  .design-one .objectives-list,
+  .design-one .reasons-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .design-one .objective-item,
+  .design-one .reason-item {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-one .sobre-nosotros-container {
+    padding: 100px 0;
+  }
+  .design-one .sobre-nosotros-container .hero-section {
+    padding: 40px 0;
+    width: 100%;
+    margin: auto 0;
+  }
+  .design-one .hero-title {
+    font-size: 2rem;
+  }
+
+  .design-one .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .design-one .section-title {
+    font-size: 1.8rem;
+  }
+
+  .design-one .section-text {
+    font-size: 1rem;
+  }
+
+  .design-one .footer-section {
+    border-radius: 0;
+  }
+
+  .design-one .footer-section p {
+    font-size: 1.2rem;
+  }
+}

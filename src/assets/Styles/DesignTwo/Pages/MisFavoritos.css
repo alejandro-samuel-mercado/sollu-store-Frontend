@@ -1,0 +1,213 @@
+/* Favoritos.css */
+.design-two .favoritos-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 140px 15px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+}
+
+/* Fondo con partículas animadas */
+.destwo .particles-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.desing-two .particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Encabezado */
+.desing-two .favoritos-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.desing-two .favoritos-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--terciario);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.desing-two .heart-icon {
+  color: #ff6347;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.desing-two .subtitle {
+  font-family: var(--fuenteSecundaria);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Grid de productos */
+.desing-two .favoritos-main {
+  position: relative;
+  z-index: 2;
+}
+
+.desing-two .favoritos-main .productos-all {
+  grid-template-columns: repeat(4, 1fr);
+  margin: 5%;
+  display: grid;
+  row-gap: 70px !important;
+  column-gap: 30px;
+}
+
+/* Ajustes responsivos */
+@media (min-width: 1101px) and (max-width: 1300px) {
+  .desing-two .favoritos-main .productos-all {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 4%;
+    row-gap: 70px !important;
+    column-gap: 30px;
+  }
+}
+
+@media (min-width: 860px) and (max-width: 1100px) {
+  .desing-two .favoritos-container {
+    padding: 100px 15px;
+  }
+  .desing-two .favoritos-main .productos-all {
+    margin: 4%;
+    grid-template-columns: repeat(3, 1fr) !important;
+    row-gap: 30px !important;
+    column-gap: 30px;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 859px) {
+  .desing-two .favoritos-container {
+    padding: 100px 15px;
+  }
+  .desing-two .favoritos-main .productos-all {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 7%;
+    row-gap: 30px !important;
+    column-gap: 60px;
+  }
+}
+
+@media (max-width: 719px) {
+  .desing-two .favoritos-container {
+    padding: 80px 15px;
+  }
+  .desing-two .favoritos-main .productos-all {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px !important;
+    margin: 10% 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .desing-two .favoritos-main .productos-all {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 60px !important;
+    margin: 15%;
+  }
+}
+
+/* Estilo para cuando no hay productos */
+.desing-two .no-products {
+  text-align: center;
+  padding: 50px;
+  color: #666;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-family: var(--fuenteSecundaria);
+  line-height: 1.5;
+}
+
+.desing-two .explore-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--primario1);
+  color: var(--colorFuentePrimaria);
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  transition: background-color 0.3s ease;
+}
+
+.desing-two .explore-link:hover {
+  background-color: var(--secundario1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Reutilizamos los estilos de paginación de Productos */
+.desing-two .favoritos-container .pagination {
+  font-family: var(--fuenteSecundaria);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 15px 0;
+  flex-wrap: wrap;
+}
+
+.desing-two .favoritos-container .page-btn {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  transition: all 0.3s;
+}
+
+.desing-two .favoritos-container .page-btn:hover:not(:disabled) {
+  background: var(--primario1);
+  color: white;
+  border-color: var(--primario1);
+}
+
+.desing-two .favoritos-container .page-btn.active {
+  background: var(--primario1);
+  color: white;
+  border-color: var(--primario1);
+}
+
+.desing-two .favoritos-container .page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

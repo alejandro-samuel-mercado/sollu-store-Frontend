@@ -1,0 +1,606 @@
+/* Contenedor principal */
+.design-two .product-detail-container {
+  min-height: 100vh;
+  background: var(--fondo1);
+  padding: 80px 20px 50px 20px;
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elemento decorativo de fondo */
+.design-two .product-detail-container::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: var(--fondo2); /* Gris claro */
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* Botón de regresar */
+.design-two .back-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: var(--primario1); /* Azul oscuro */
+  color: var(--colorFuentePrimaria); /* Blanco */
+  border: 1px solid var(--primario2); /* Borde azul claro */
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.design-two .back-button svg {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.design-two .back-button:hover {
+  background: var(--primario2); /* Azul claro */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección principal */
+.design-two .product-main {
+  display: flex;
+  width:90%;
+  margin: auto ;
+  background: var(--fondo1);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.226);
+  border: 3px solid #7c797942; 
+  padding:80px 30px 80px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Imagen del producto */
+.design-two .product-image-section {
+  flex: 1;
+  padding-right:0;
+}
+
+.design-two .product-image {
+  width: 90%;
+  height:100% ;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--primario2); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Información del producto */
+.design-two .product-info-section {
+  flex: 1;
+  padding-left: 5px;
+  padding-right: 0px;
+}
+
+.design-two .product-title {
+  font-size: 2.2rem;
+  color: var(--primario1); /* Azul oscuro */
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .product-price {
+  font-size: 1.8rem;
+  color: var(--terciario); /* Gris oscuro */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.design-two .product-points {
+  font-size: 1.1rem;
+  color: var(--secundario2); /* Verde oscuro */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.design-two .product-points svg {
+  margin-right: 5px;
+  font-size: 1.3rem;
+}
+
+.design-two .product-description {
+  font-size: 1rem;
+  color: var(--fondo4); /* Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.design-two .categoria-desc{
+margin-bottom: 10px;
+display: flex;
+}
+
+.design-two .categoria-desc p,.design-two .categoria-link {
+  font-family: var(--fuenteSecundaria);
+}
+.design-two .categoria-desc p{
+  margin-right: 10px;
+}
+/* Selector de talle */
+.design-two .product-size-selector {
+  margin-bottom: 20px;
+}
+
+.design-two .product-size-selector label {
+  font-family: var(--fuenteSecundaria);
+  font-size: 1.1rem;
+  color: var(--terciario);
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.design-two .product-size-selector select {
+  padding: 2px;
+  width:60%;
+  border: 2px solid var(--fondo3);
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 1rem;
+  color: var(--terciario);
+  background:#fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.253),0 4px 10px rgba(0, 0, 0, 0.253);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-two .product-size-selector select:focus {
+  outline: none;
+  border-color: var(--primario1); /* Azul oscuro */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Selector de cantidad */
+.design-two .product-quantity-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.design-two .product-quantity-selector label {
+    font-family: var(--fuenteSecundaria);
+  font-size: 1.1rem;
+  color: var(--terciario);
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.design-two .quantity-controls {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--fondo3); 
+    font-family: var(--fuenteSecundaria);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .quantity-controls button {
+  padding: 8px 12px;
+  background: var(--primario1); /* Azul oscuro */
+  color: var(--colorFuentePrimaria); /* Blanco */
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-two .quantity-controls button:hover {
+  background: var(--primario2); /* Azul claro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.design-two .quantity-controls span {
+  padding: 8px 15px;
+  font-size: 1.1rem;
+  color: var(--terciario); /* Gris oscuro */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  background: var(--fondo2); /* Gris claro */
+}
+
+/* Botones de acción */
+.design-two .product-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.design-two .try-button,
+.design-two .add-to-cart-button {
+  padding: 12px 20px;
+  background: var(--primario1); 
+  color: var(--colorFuentePrimaria);
+  border: 1px solid var(--primario2); 
+  border-radius: 6px;
+  font-family: var(--fuentePrimaria), sans-serif; /* "Gugi" */
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .try-button:hover,
+.design-two .add-to-cart-button:hover {
+  background: var(--primario2); /* Azul claro */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección de recomendaciones */
+.design-two .recommendations-section {
+  max-width: 90%;
+  margin:150px auto !important;
+  padding: 30px;
+  background: #ffffffaf;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--primario1); 
+}
+
+.design-two .recommendations-title {
+  font-size: 2rem;
+  color: var(--primario1);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+    word-wrap: break-word !important;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Tarjeta de recomendación */
+.design-two .recommendation-card {
+  background:var(--fondo2);
+  border: 2px solid var(--fondo2); 
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.308), 0 8px 20px rgba(0, 0, 0, 0.26); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.design-two .recommendation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  border-color: var(--primario1); /* Borde azul al hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.design-two .recommendation-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--primario2); /* Borde azul claro */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.design-two .recommendation-info {
+  text-align: center;
+}
+
+.design-two .recommendation-name {
+  font-size: 1.2rem;
+  color: var(--terciario); /* Gris oscuro */
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.design-two .recommendation-price {
+  font-size: 1.1rem;
+  color: var(--primario1); /* Azul oscuro */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.design-two .recommendation-points {
+  font-size: 0.95rem;
+  color: var(--secundario2); /* Verde oscuro */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.design-two .recommendation-points svg {
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+.design-two .view-details-button {
+  padding: 8px 15px;
+  background: var(--primario1);
+  color: var(--colorFuentePrimaria); 
+  border: 1px solid var(--primario2);
+  border-radius: 6px;
+  font-family: var(--fuentePrimaria), sans-serif; 
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .view-details-button:hover {
+  background: var(--primario2); /* Azul claro */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Mensaje de no recomendaciones */
+.design-two .no-recommendations {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: var(--terciario); /* Gris oscuro */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-weight: 600;
+  background: var(--fondo2); /* Gris claro */
+  border: 2px solid var(--primario1); /* Borde azul oscuro */
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+ .design-two .loading-text,
+ .design-two .no-products-text {
+  margin: 80px auto;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--fondo5);
+  padding: 50px 0;
+}
+
+
+/* Responsividad */
+@media (max-width: 999px) {
+   .design-two .product-detail-container {
+  padding: 80px 10px ;
+}
+.design-two .product-main {
+  width:100%;
+  padding:40px
+}
+  .design-two .product-image-section {
+    margin: auto;
+    max-width: 60% !important;
+  }
+
+.design-two .product-image {
+  margin: auto;
+  width: 100%;
+  height:auto ;
+}
+
+.design-two .product-info-section {
+  margin-left: 30px;
+
+}
+  .design-two .recommendations-section {
+  width: 90%;
+    margin:40px auto !important;
+      padding: 50px;
+
+}
+   .design-two .recommendation-card {
+    margin: auto;
+ width: 90%;
+}
+
+  .design-two .product-title {
+    font-size: 1.8rem;
+  }
+
+  .design-two .product-price {
+    font-size: 1.5rem;
+  }
+
+
+.design-two .try-button,
+.design-two .add-to-cart-button {
+  padding: 10px;
+}
+
+}
+@media (max-width: 768px) {
+   .design-two .product-detail-container {
+  padding: 80px 20px ;
+}
+.design-two .product-main {
+  flex-direction: column;
+  width:90%;
+  padding:40px 10px
+}
+
+  .design-two .product-image-section {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+
+
+.design-two .product-image {
+  width: 100%;
+  height:auto ;
+}
+
+  .design-two .product-info-section {
+    margin: auto;
+    padding: 0;
+ width: 70%;
+  padding-left: 0;
+  padding-right: 0;
+  }
+
+  .design-two .product-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+  .design-two .recommendations-title {
+    font-size: 1.8rem;
+  }
+
+  .design-two .recommendations-section {
+  width: 100%;
+    margin:40px auto !important;
+      padding: 20px;
+
+}
+   .design-two .recommendation-card {
+    margin: auto;
+ width: 100%;
+}
+
+}
+
+@media (max-width: 673px) {
+
+  .design-two .recommendations-section {
+  width: 80%;
+    margin:40px auto !important;
+      padding: 20px;
+
+}
+   .design-two .recommendation-card {
+    margin: auto;
+ width: 80%;
+}
+
+}
+
+@media (max-width: 480px) {
+  .design-two .product-detail-container {
+  min-height: 100vh;
+  background: var(--fondo1);
+  padding: 60px 2px 50px 2px;
+}
+.design-two .product-main {
+  width:100%;
+  padding: 40px 20px;
+}
+
+.design-two .product-image-section {
+padding: 0;
+margin: auto;
+}
+
+.design-two .product-info-section {
+padding: 0;
+margin: 0 auto;
+}
+  .design-two .back-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .product-title {
+    margin-top: 20px;
+    font-size: 1.6rem;
+
+  }
+
+  .design-two .product-price {
+    font-size: 1.3rem;
+  }
+
+  .design-two .product-description {
+    font-size: 0.9rem;
+  }
+
+
+  .design-two .try-button,
+  .design-two .add-to-cart-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  .design-two .recommendations-title {
+    font-size: 1.6rem;
+  }
+  .design-two .recommendation-card {
+    margin: auto !important;
+ width: 80%;
+}
+
+  .design-two .recommendation-name {
+    font-size: 1.1rem;
+  }
+
+  .design-two .recommendation-price {
+    font-size: 1rem;
+  }
+
+  .design-two .view-details-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .no-recommendations {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .design-two .product-detail-container {
+  padding: 60px 0px 50px 0px;
+}
+.design-two .product-main {
+  width:100%;
+  padding: 40px 4px;
+}
+  .design-two .product-info-section {
+ width: 80%
+  }
+
+    .design-two .recommendations-section {
+  width: 100%;
+    margin:40px auto !important;
+      padding: 10px;
+
+}
+   .design-two .recommendation-card {
+    margin: auto;
+ width: 80%;
+}
+}

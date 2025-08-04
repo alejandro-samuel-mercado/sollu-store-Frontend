@@ -1,0 +1,394 @@
+/* Contenedor principal */
+.design-two .sobre-nosotros-container {
+  min-height: 100vh; 
+  background: linear-gradient(135deg, var(--fondo1) 60%, var(--fondo2) 100%);
+  padding: 120px 20px 80px 20px; 
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" como fuente primaria */
+  position: relative;
+  overflow: hidden; 
+}
+
+/* Elemento decorativo de fondo */
+.design-two .sobre-nosotros-container::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: var(--cuarto); /* #85ee8562 - Verde claro translúcido */
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* Hero Section */
+.design-two .hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.design-two .hero-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.design-two .hero-title {
+  font-size: 2.8rem;
+  color: var(--primario1); /* #485295 - Azul oscuro */
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.design-two .hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.design-two .hero-animation {
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+}
+
+/* Secciones generales */
+.design-two .ecommerce-importance,
+.design-two .site-functionality {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  padding: 30px;
+  background:var(--fondo1);
+  border: 1px solid var(--fondo3); /* #e6e1e1 - Borde claro */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.185),0 6px 20px rgba(0, 0, 0, 0.151);
+  position: relative;
+  z-index: 1;
+}
+
+.design-two .text-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.design-two .section-title {
+  font-size: 2rem;
+  color: var(--secundario2); /* #2e8b57 - Verde oscuro */
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .section-text {
+  font-size: 1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  line-height: 1.6;
+}
+
+.design-two .section-animation {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+/* Objectives Section */
+.design-two .objectives-section {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  padding: 30px;
+  background:var(--fondo1);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.185),0 6px 20px rgba(0, 0, 0, 0.151);  position: relative;
+  z-index: 1;
+}
+
+.design-two .objectives-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.design-two .objective-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: var(--fondo2);
+  border: 1px solid var(--fondo3); /* #e6e1e1 - Borde claro */
+  border-left: 4px solid var(--primario1); /* #485295 - Borde lateral azul */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-two .objective-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .objective-item > div {
+  width: 40px;
+  height: 40px;
+  background: var(--secundario1); /* #50c878 - Verde claro */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .objective-item p {
+  font-size: 1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Why Choose Us Section */
+.design-two .why-choose-us {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  padding: 30px;
+  background: var(--fondo1);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.185),0 6px 20px rgba(0, 0, 0, 0.151);  position: relative;
+  z-index: 1;
+}
+
+.design-two .reasons-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.design-two .reason-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95); /* Fondo blanco semitransparente */
+  border: 1px solid var(--fondo3); /* #e6e1e1 - Borde claro */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-two .reason-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.design-two .reason-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--primario1); /* #485295 - Azul oscuro */
+  color: var(--colorFuentePrimaria); /* #ffffff - Blanco */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .reason-item h3 {
+  font-size: 1.4rem;
+  color: var(--terciario); /* #333333 - Gris oscuro */
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.design-two .reason-item p {
+  font-size: 1rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Footer Section */
+.design-two .footer-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to top, var(--fondo2), var(--fondo1)); /* Gradiente inverso */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.design-two .footer-section p {
+  font-size: 1.2rem;
+  color: var(--fondo4); /* #a2a2a3 - Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-bottom: 20px;
+}
+
+.design-two .footer-animation {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .design-two .sobre-nosotros-container {
+    padding: 30px 15px;
+  }
+
+  .design-two .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .design-two .hero-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .design-two .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .design-two .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .design-two .hero-animation {
+    width: 200px;
+    height: 200px;
+  }
+
+  .design-two .ecommerce-importance,
+  .design-two .site-functionality {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .design-two .text-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .design-two .section-title {
+    font-size: 1.8rem;
+  }
+
+  .design-two .section-text {
+    font-size: 0.95rem;
+  }
+
+  .design-two .section-animation {
+    width: 200px;
+    height: 200px;
+  }
+
+  .design-two .objectives-list,
+  .design-two .reasons-list {
+    grid-template-columns: 1fr;
+  }
+
+  .design-two .footer-section {
+    padding: 30px 15px;
+  }
+
+  .design-two .footer-animation {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-two .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .design-two .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .design-two .hero-animation {
+    width: 150px;
+    height: 150px;
+  }
+
+  .design-two .section-title {
+    font-size: 1.6rem;
+  }
+
+  .design-two .section-text {
+    font-size: 0.9rem;
+  }
+
+  .design-two .section-animation {
+    width: 150px;
+    height: 150px;
+  }
+
+  .design-two .objective-item > div,
+  .design-two .reason-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .design-two .objective-item p,
+  .design-two .reason-item p {
+    font-size: 0.9rem;
+  }
+
+  .design-two .reason-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .design-two .footer-section p {
+    font-size: 1rem;
+  }
+
+  .design-two .footer-animation {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .design-two .hero-section,
+  .design-two .ecommerce-importance,
+  .design-two .site-functionality,
+  .design-two .objectives-section,
+  .design-two .why-choose-us,
+  .design-two .footer-section {
+    max-width: 700px;
+  }
+
+  .design-two .hero-animation,
+  .design-two .section-animation {
+    width: 200px;
+    height: 200px;
+  }
+}

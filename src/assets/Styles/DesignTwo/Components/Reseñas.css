@@ -1,0 +1,365 @@
+/* Contenedor principal de la sección de reseñas */
+.design-two .review-section-home {
+  max-width: 1200px;
+  margin: 40px auto 100px auto;
+  padding: 40px 20px;
+  background: var(--fondo1); /* #f5f1f1 - Fondo gris claro */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra pronunciada */
+  font-family: var(--fuentePrimaria), sans-serif;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease-out;
+}
+
+.review-section-home.slide-in-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Título de la sección */
+.design-two .review-section-home h2 {
+  font-size: 2.5rem;
+  color: var(--terciario); /* #333333 - Gris oscuro */
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Contenedor Swiper */
+.design-two .review-section-home .swiper {
+  padding: 20px 0; /* Más espacio para evitar recortes */
+  overflow: visible; /* Permite ver las tarjetas laterales */
+  width: 100%;
+}
+
+/* Ajuste para los slides de Swiper */
+.design-two .review-section-home .swiper-slide {
+  display: flex;
+  justify-content: center;
+  height: auto; /* Ajusta la altura al contenido */
+}
+
+/* Tarjeta de reseña */
+.design-two .review-section-home .review-card {
+  background: var(--fondo2); /* Gris claro */
+  border-radius: 8px;
+  padding: 20px;
+  border: 2px solid var(--primario1); /* Borde azul oscuro */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.342), 0 4px 12px rgba(0, 0, 0, 0.342);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%; /* Asegura que todas las tarjetas tengan el mismo ancho */
+  max-width: 400px; /* Limita el ancho máximo */
+  min-height: 320px; /* Altura mínima fija para uniformidad */
+  justify-content: space-between; /* Distribuye el contenido */
+  position: relative;
+}
+
+.design-two .review-section-home .review-card:hover {
+  transform: translateY(-10px); /* Elevación sin recorte */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del avatar */
+.design-two .review-section-home .review-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primario2); /* #7cbcfc - Borde azul claro */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* Nombre del usuario */
+.design-two .review-section-home .review-card h3 {
+  font-size: 1.3rem;
+  color: var(--terciario); /* Gris oscuro */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-weight: 600;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Calificación en la tarjeta */
+.design-two .review-section-home .review-card .rating {
+  font-size: 1.5rem;
+  color: var(--secundario1); /* #50c878 - Verde claro */
+  background: rgba(80, 200, 120, 0.1); /* Fondo verde claro sutil */
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 5px 0;
+  flex-shrink: 0;
+}
+
+/* Comentario en la tarjeta */
+.design-two .review-section-home .review-card p {
+  font-size: 1rem;
+  color: var(--terciario);
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  line-height: 1.6;
+  margin: 0;
+  padding: 10px;
+  background: rgba(236, 234, 234, 0.226); /* Fondo blanco sutil */
+  border-radius: 8px;
+  border: 1px solid var(--fondo3); /* Borde gris claro */
+  flex-grow: 1; /* Ocupa el espacio disponible */
+  overflow: hidden;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  height: 120px; /* Limita la altura */
+  width: 90%;
+}
+
+/* Línea divisoria */
+.design-two .review-section-home .review-section hr {
+  border: 2px solid var(--primario1); /* #485295 - Azul oscuro */
+  width: 100%;
+  margin: 40px 0;
+}
+
+/* Contenedor del formulario de reseña */
+.design-two .review-section-home .review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Área de texto */
+.design-two .review-section-home textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 15px;
+  border: 2px solid var(--primario1); /* Borde azul oscuro */
+  border-radius: 8px;
+  background: var(--fondo2); /* Gris claro */
+  font-size: 1rem;
+  color: var(--terciario); /* Gris oscuro */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-two .review-section-home textarea:focus {
+  outline: none;
+  border-color: var(--primario2); /* Azul claro */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor de calificación en el formulario */
+.design-two .review-section-home.rating-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Estrellas en el formulario */
+.design-two .review-section-home .rating-input .span-div {
+  display: flex;
+  gap: 5px;
+}
+
+.design-two .review-section-home.rating-input span {
+  font-size: 2rem;
+  color: var(--secundario1); /* Verde claro */
+  transition: transform 0.2s ease;
+}
+
+.design-two .review-section-home.rating-input span:hover {
+  transform: scale(1.2); /* Efecto al pasar el mouse */
+}
+
+/* Botón de enviar reseña */
+.design-two .review-section-home button {
+  padding: 12px 25px;
+  background: var(--primario1); /* Azul oscuro */
+  color: var(--colorFuentePrimaria); /* Blanco */
+  border: 2px solid var(--primario2); /* Borde azul claro */
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  align-self: center; /* Centra el botón */
+}
+
+.design-two .review-section-home button:hover {
+  background: var(--primario2); /* Azul claro */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.design-two .review-section-home a {
+  color: var(--primario1); /* Azul oscuro */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.design-two .review-section-home a:hover {
+  color: var(--primario2); /* Azul claro */
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .design-two .review-section-home {
+    padding: 30px 15px;
+  }
+
+  .design-two .review-section-home h2 {
+    font-size: 2.2rem;
+  }
+
+  .design-two .review-section-home .review-card {
+    padding: 15px;
+    min-height: 300px;
+  }
+
+  .design-two .review-section-home .review-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .design-two .review-section-home .review-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .design-two .review-section-home .review-card .rating {
+    font-size: 1.3rem;
+  }
+
+  .design-two .review-section-home .review-card p {
+    font-size: 0.95rem;
+  }
+
+  .design-two .review-section-home textarea {
+    min-height: 100px;
+  }
+
+  .design-two .review-section-home button {
+    padding: 10px 20px;
+  }
+
+  .design-two .review-section-home .rating-input span {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .design-two .review-section-home {
+    padding: 20px 10px;
+  }
+
+  .design-two .review-section-home h2 {
+    font-size: 2rem;
+  }
+
+  .design-two .review-section-home .review-card {
+    padding: 12px;
+    min-height: 280px;
+    max-width: 350px;
+  }
+
+  .design-two .review-section-home .review-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .design-two .review-section-home .review-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .design-two .review-section-home .review-card .rating {
+    font-size: 1.2rem;
+  }
+
+  .design-two .review-section-home .review-card p {
+    font-size: 0.9rem;
+  }
+
+  .design-two .review-section-home hr {
+    margin: 30px 0;
+  }
+
+  .design-two .review-section-home textarea {
+    min-height: 90px;
+  }
+
+  .design-two .review-section-home button {
+    padding: 8px 18px;
+    font-size: 0.95rem;
+  }
+
+  .design-two .review-section-home .rating-input span {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-two .review-section-home {
+    padding: 15px 10px;
+  }
+
+  .design-two .review-section-home h2 {
+    font-size: 1.8rem;
+  }
+
+  .design-two .review-section-home .review-card {
+    padding: 10px;
+    min-height: 260px;
+    max-width: 300px;
+  }
+
+  .design-two .review-section-home .review-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .design-two .review-section-home .review-card h3 {
+    font-size: 1rem;
+  }
+
+  .design-two .review-section-home .review-card .rating {
+    font-size: 1.1rem;
+  }
+
+  .design-two .review-section-home .review-card p {
+    font-size: 0.85rem;
+    max-height: 100px;
+  }
+
+  .design-two .review-section-home hr {
+    margin: 20px 0;
+  }
+
+  .design-two .review-section-home textarea {
+    min-height: 80px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .review-section-home button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .review-section-home .rating-input span {
+    font-size: 1.4rem;
+  }
+}

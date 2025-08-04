@@ -1,0 +1,427 @@
+.design-one .novedades {
+  position: relative;
+  margin: 5% 0;
+  padding: 3vh 0 10vh 0;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+}
+
+/* Título */
+.design-one .novedades h2 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--colorFuentePrimaria);
+  text-shadow: 0 0 5px #6c5ce7, 0 0 10px #00b894, 0 0 20px #1b1919;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor del tender, perchas y carrusel */
+.design-one .tender-div {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Tender (barra horizontal) */
+.design-one .tender-div .tender {
+  background-color: var(--terciario);
+  width: 100%;
+  height: 3vh;
+  margin: 0 auto;
+}
+
+/* Contenedor de las perchas */
+.design-one .percha-div {
+  position: relative;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Perchas */
+.design-one .percha-div img {
+  width: clamp(220px, 90%, 300px);
+  height: auto;
+}
+
+/* Contenedor del carrusel */
+.design-one .carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5vh 5vh;
+  margin-top: -14vh;
+  overflow: visible;
+}
+
+/* Ajuste del swiper */
+.design-one .novedades .carousel-container .swiper {
+  width: 100%;
+  height: auto;
+  padding: 4vh 5vh !important;
+  display: flex;
+}
+
+/* Tarjetas */
+.design-one .novedades .card {
+  width: clamp(220px, 90%, 300px);
+  max-width: 300px;
+  height: 350px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: var(--fondo2);
+  border-radius: 30px;
+  border: 3px solid #4852959c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.design-one .novedades .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Animación activada por la clase 'animate' */
+.design-one .novedades .card.animate {
+  animation: cardEntry 0.5s ease-out forwards;
+  animation-delay: calc(
+    0.3s * var(--swiper-slide-index, 0)
+  ); /* Retraso escalonado */
+}
+
+/* Definición de la animación */
+@keyframes cardEntry {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Entrada desde abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Imagen dentro de la tarjeta */
+.design-one .novedades .card img {
+  width: 80%;
+  height: 170px;
+  margin: 10% auto 0 auto;
+  border-radius: 20px;
+}
+
+/* Título de la tarjeta */
+.design-one .novedades .card h3 {
+  font-family: var(--fuenteSecundaria);
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--terciario);
+  word-wrap: break-word !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 10px auto 5px;
+}
+
+/* Descripción de la tarjeta */
+.design-one .novedades .card p {
+  font-family: var(--fuenteTerciaria);
+  margin: 0 7px;
+  font-size: clamp(12px, 1.5vw, 15px);
+  color: var(--terciario);
+  height: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Botón dentro de la tarjeta */
+.design-one .novedades .card button {
+  position: absolute;
+  bottom: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: auto;
+  padding: 20px auto;
+  border-radius: 40px;
+  background-color: var(--primario2);
+  color: var(--colorFuentePrimaria);
+  border: 3px solid var(--primario1);
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.design-one .novedades .card button p {
+  font-family: var(--fuenteSecundaria);
+  height: auto;
+  margin: 0 auto;
+}
+
+.design-one .novedades .card button h3 {
+  font-weight: 700;
+  margin: 10px auto;
+  font-family: var(--fuenteSecundaria);
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--terciario);
+}
+
+.design-one .novedades .card button:hover {
+  background-color: var(--primario1);
+  border-color: #dfe1f1bb;
+}
+
+.design-one .novedades .card button:hover h3,
+.design-one .novedades .card button:hover p {
+  color: #ffffff;
+}
+
+.design-one .novedades .favorite-btn {
+  transform: translateX(150%) !important;
+  border: solid 2px var(--primario1) !important;
+  left: 0;
+  bottom: 0;
+  background-color: var(--primario1) !important;
+  color: var(--colorFuentePrimaria) !important;
+}
+
+.design-one .novedades .favorite-btn:hover {
+  background-color: var(--primario2) !important;
+}
+/* Botones de navegación del carrusel */
+.design-one .novedades .swiper-button-prev,
+.design-one .novedades .swiper-button-next {
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--colorFuenteSecundaria);
+  font-size: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.design-one .novedades .swiper-button-prev {
+  left: 5px;
+}
+.design-one .novedades .swiper-button-next {
+  right: 5px;
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+  .design-one .novedades {
+    min-height: 450px;
+  }
+  .design-one .carousel-container {
+    padding: 5vh 5vh;
+    margin-top: -14vh;
+  }
+
+  .design-one .novedades .carousel-container .swiper {
+    padding: 0 5vh;
+  }
+
+  .design-one .novedades .card {
+    top: 0;
+    min-height: 300px;
+  }
+  .design-one .novedades .swiper-button-prev {
+    left: 2px;
+  }
+
+  .design-one .novedades .swiper-button-next {
+    right: 2px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .design-one .novedades {
+    min-height: 400px;
+  }
+
+  .design-one .novedades h2 {
+    font-size: 2.5rem;
+  }
+
+  .design-one .tender-div .tender {
+    height: 2.5vh;
+  }
+
+  .design-one .carousel-container {
+    padding: 5vh 3vh;
+    margin-top: -14vh;
+  }
+
+  .design-one .novedades .carousel-container .swiper {
+    padding: 0 5vh;
+  }
+
+  .design-one .novedades .card {
+    top: 0;
+    min-height: 300px;
+  }
+  .design-one .novedades .swiper-button-prev,
+  .design-one .novedades .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .design-one .novedades {
+    min-height: 400px;
+  }
+
+  .design-one .novedades h2 {
+    font-size: 2.5rem;
+  }
+
+  .design-one .tender-div .tender {
+    height: 2.5vh;
+  }
+  .design-one .carousel-container {
+    padding: 5vh 3vh;
+    margin-top: -14vh;
+  }
+
+  .design-one .novedades .carousel-container .swiper {
+    padding: 0 5vh;
+  }
+
+  .design-one .novedades .card {
+    min-height: 280px;
+  }
+  .design-one .novedades .swiper-button-prev {
+    left: 4px;
+  }
+
+  .design-one .novedades .swiper-button-next {
+    right: 4px;
+  }
+  .design-one .novedades .swiper-button-prev,
+  .design-one .novedades .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .design-one .novedades {
+    margin: 10% 0;
+    max-height: 660px;
+  }
+
+  .design-one .novedades h2 {
+    font-size: 2.5rem;
+  }
+
+  .design-one .tender-div .tender {
+    height: 2.5vh;
+  }
+
+  .design-one .carousel-container {
+    padding: 5vh 3vh;
+    margin-top: -12.8vh;
+  }
+  .design-one .novedades .carousel-container .swiper {
+    padding: 0 8vh;
+  }
+
+  .design-one .novedades .card {
+    min-height: 280px;
+    width: clamp(220px, 80%, 260px);
+  }
+
+  .design-one .novedades .swiper-button-prev,
+  .design-one .novedades .swiper-button-next {
+    width: 60px;
+    height: 60px;
+  }
+
+  .design-one .novedades .swiper-button-prev {
+    left: 3px;
+  }
+
+  .design-one .novedades .swiper-button-next {
+    right: 3px;
+  }
+}
+
+@media (max-width: 500px) {
+  .design-one .novedades {
+    margin: 5% 0;
+    max-height: 620px;
+  }
+
+  .design-one .novedades h2 {
+    font-size: 2rem;
+  }
+
+  .design-one .tender-div .tender {
+    height: 2vh;
+  }
+
+  .design-one .carousel-container {
+    padding: 5vh 2vh;
+    margin-top: -13.5vh;
+  }
+
+  .design-one .novedades .card {
+    min-height: 260px;
+  }
+
+  .design-one .novedades .card img {
+    max-height: 20vh;
+  }
+
+  .design-one .novedades .card button {
+    bottom: 10px;
+    width: 70%;
+    padding: 8px;
+  }
+
+  .design-one .novedades .swiper-button-prev,
+  .design-one .novedades .swiper-button-next {
+    width: 50px;
+    height: 50px;
+  }
+
+  .design-one .novedades .swiper-button-prev {
+    left: 12px;
+  }
+
+  .design-one .novedades .swiper-button-next {
+    right: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .design-one .novedades {
+    min-height: 320px;
+  }
+
+  .design-one .novedades .swiper-button-prev,
+  .design-one .novedades .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .design-one .novedades .swiper-button-prev {
+    left: 8px;
+  }
+
+  .design-one .novedades .swiper-button-next {
+    right: 8px;
+  }
+}

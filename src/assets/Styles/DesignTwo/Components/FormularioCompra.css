@@ -1,0 +1,321 @@
+/* Contenedor principal del formulario */
+.design-two .container-pago {
+  max-width: 800px;
+  margin:  auto;
+  padding: 20px;
+  background: var(--fondo1); /* #f5f1f1 - Fondo gris claro */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra pronunciada */
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" */
+  overflow-y: auto; /* Scroll vertical si es necesario */
+  max-height: 700px;
+}
+
+/* Encabezado de pasos */
+.design-two .head-form-step {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 100px;
+  margin: 0 auto 10px auto;
+}
+
+/* Cada paso */
+.design-two .step {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background: var(--fondo2); /* Gris claro */
+  border-radius: 20px;
+  font-size: 1rem;
+  color: var(--terciario); /* Gris oscuro */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Paso activo */
+.design-two .step.active {
+  background: var(--primario1); /* Azul oscuro */
+  color: var(--colorFuentePrimaria); /* Blanco */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos principales */
+.design-two .container-pago h2 {
+  font-size: 2rem;
+  color: var(--terciario); /* Gris oscuro */
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos secundarios */
+.design-two .container-pago h3 {
+  font-size: 1.5rem;
+  color: var(--terciario); /* Gris oscuro */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Títulos de datos en Step 1 */
+.design-two .container-pago h4 {
+  font-size: 1.2rem;
+  color: var(--fondo4); /* Gris intermedio */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-bottom: 10px;
+}
+
+/* Grupo de formulario */
+.design-two  .container-pago .form-group {
+  margin-bottom: 25px;
+}
+
+/* Etiquetas */
+.design-two  .container-pago .form-group label {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--terciario); /* Gris oscuro */
+  font-family: var(--fuentePrimaria), sans-serif; /* "Jua" */
+  margin-bottom: 8px;
+}
+
+/* Inputs y selectores */
+.design-two .container-pago .form-input {
+  width: 100%;
+  padding: 5px 15px;
+  border: 2px solid var(--fondo3); 
+  border-radius: 8px;
+  background: var(--fondo2);
+  height: auto !important;
+  font-size: 1rem;
+  color: var(--terciario); 
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.design-two  .container-pago .form-input:focus {
+  outline: none;
+  border-color: var(--primario1); /* Azul oscuro */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Mensaje de error */
+.design-two  .container-pago .error-message {
+  font-size: 0.95rem;
+  color: red; /* Verde oscuro como error */
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* Mensaje de precio/envío */
+.design-two  .container-pago .price-message {
+  font-size: 1rem;
+  color: var(--primario1);
+  font-family: var(--fuenteSecundaria), sans-serif;
+  margin-top: 10px;
+  white-space: pre-line;
+}
+
+/* Contenedor del resumen de compra */
+.design-two .carrito-container-pago {
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--primario1); /* Borde azul oscuro */
+}
+
+/* Lista de ítems del carrito */
+.design-two .carrito-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.design-two .carrito-item-compra-pago {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -15px !important;
+}
+
+.design-two .carrito-item-compra-pago p{
+text-align:start !important;
+border-bottom: 2px solid #7976764d;
+width: 70%;
+}
+
+.design-two .step-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.design-two .btn-back {
+  padding: 12px 25px;
+  background: var(--fondo4); /* Gris intermedio */
+  color: var(--terciario); /* Gris oscuro */
+  border: 2px solid var(--primario1); /* Borde azul oscuro */
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .btn-back:hover {
+  background: var(--primario1); /* Azul oscuro */
+  color: var(--colorFuentePrimaria); /* Blanco */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Botón Principal (Siguiente/Comprar) */
+.design-two .btn-primary {
+  padding: 12px 25px;
+  background: var(--primario1); /* Azul oscuro */
+  color: var(--colorFuentePrimaria); /* Blanco */
+  border: 2px solid var(--primario2); /* Borde azul claro */
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .btn-primary:hover {
+  background: var(--primario2); /* Azul claro */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Botón de validar cupón */
+.design-two .form-group button {
+  padding: 12px 20px;
+  background: var(--primario1); /* Azul oscuro */
+  color: var(--colorFuentePrimaria); /* Blanco */
+  border: none;
+  border-radius: 6px;
+  font-family: var(--fuenteSecundaria), sans-serif; /* "Gugi" */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.design-two .form-group button:hover {
+  background: var(--primario2); /* Azul claro */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .design-two .container-pago {
+    padding: 15px;
+  }
+
+  .design-two .head-form-step {
+    width: 100%;
+  }
+
+  .design-two .step {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .design-two .container-pago h2 {
+    font-size: 1.8rem;
+  }
+
+  .design-two .container-pago h3 {
+    font-size: 1.3rem;
+  }
+
+  .design-two .form-group label {
+    font-size: 1.1rem;
+  }
+
+  .design-two .form-input {
+    height: 45px;
+    font-size: 0.95rem;
+  }
+
+  .design-two .btn-back,
+  .design-two .btn-primary,
+  .design-two .form-group button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+.design-two .container-pago {
+  max-width: 350px;
+ padding: 5px;
+}
+
+  .design-two .step {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .design-two .container-pago h2 {
+    font-size: 1.5rem;
+  }
+
+  .design-two .container-pago h3 {
+    font-size: 1.2rem;
+  }
+
+  .design-two .form-group label {
+    font-size: 1rem;
+  }
+
+  .design-two .form-input {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .btn-back,
+  .design-two .btn-primary,
+  .design-two .form-group button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .error-message,
+  .design-two .price-message {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+@media (max-width: 400px) {
+.design-two .container-pago {
+  margin: 0;
+  max-width: 300px;
+ padding: 5px;
+}
+.design-two .container-pago h4 {
+text-align: center !important;
+}
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .design-two .container-pago {
+    max-width: 700px;
+  }
+
+  .design-two .head-form-step {
+    width: 90%;
+  }
+}

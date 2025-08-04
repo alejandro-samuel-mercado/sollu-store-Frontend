@@ -1,0 +1,545 @@
+/* Contenedor principal de la sección */
+.design-two .category-circles-section {
+  position: relative;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -270px 0 15vh 0; /* Ajustado desde design-one */
+  max-width: 100%;
+  padding: 5vh 20px 20% 20px; /* Ajustado desde design-one */
+  background: linear-gradient(135deg, var(--fondo1), var(--fondo2));
+  font-family: var(--fuentePrimaria), sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+.design-two .category-circles-section h2 {
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 3rem); /* Ajustado desde design-one */
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--terciario);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 5vh auto; /* Ajustado desde design-one */
+  position: relative;
+  z-index: 10;
+}
+
+/* Contenedor principal de categorías */
+.design-two .category-circles-section .category-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+    justify-content: center;
+  gap: 40px; /* Ajustado desde design-one */
+}
+
+/* Contenedor de las categorías */
+.design-two .category-circles-section .circles-container {
+  position: relative;
+  width: 500px; /* Ajustado desde design-one */
+  height: 500px;
+  left:-100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Elemento central (Ver todas) */
+.design-two .category-circles-section .central-circle {
+  width: 150px; /* Ajustado desde design-one */
+  height: 150px;
+  background: linear-gradient(to bottom, var(--secundario1), var(--secundario2));
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--fuenteSecundaria);
+  text-transform: uppercase;
+  color: var(--colorFuentePrimaria);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: spin 10s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 2;
+}
+
+/* Efecto hover para el elemento central */
+.design-two .category-circles-section .central-circle:hover {
+  transform: scale(1.1) translate(-50%, -50%); /* Manteniendo el centrado */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Elementos circundantes (categorías) */
+.design-two .category-circles-section .surrounding-circle {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to bottom, var(--primario1), var(--primario2));
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: spin 8s linear infinite;
+}
+
+
+.design-two .category-circles-section .surrounding-circle p{
+  margin: auto 5px;
+  width:auto;
+  font-size: 0.9rem;
+  font-weight: 400;
+  word-wrap:normal;
+ text-overflow:ellipsis;
+ overflow: hidden;
+  font-family: var(--fuenteSecundaria);
+  text-transform: uppercase;
+  color: var(--colorFuentePrimaria);
+
+}
+
+/* Efecto hover para los elementos circundantes */
+.design-two .category-circles-section .surrounding-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation-play-state: paused;
+}
+
+/* Posicionamiento de los elementos circundantes (disposición en cruz desde design-one) */
+.design-two .category-circles-section .circle-0 {
+  top: 12%;
+  left: 56%;
+  transform: translateX(-50%);
+}
+
+.design-two .category-circles-section .circle-1 {
+  top: 50%;
+  right: -18%;
+  transform: translateY(-50%);
+}
+
+.design-two .category-circles-section .circle-2 {
+  bottom: -18%;
+  left: 56%;
+  transform: translateX(-50%);
+}
+
+.design-two .category-circles-section .circle-3 {
+  top: 50%;
+  left: 12%;
+  transform: translateY(-50%);
+}
+
+/* Carrusel emergente */
+.design-two .category-circles-section .carousel-popup {
+  position: absolute;
+  width: 350px; /* Ajustado desde design-one */
+  height: auto;
+  background: var(--fondo3);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  top: 50%;
+  left: 65%; /* Ajustado desde design-one */
+  transform: translateY(-50%);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Mensaje de fallback en el carrusel */
+.design-two .category-circles-section .carousel-popup p {
+  font-size: 1rem;
+  color: var(--terciario);
+  margin: 0;
+}
+
+/* Título del carrusel emergente */
+.design-two .category-circles-section .carousel-popup h3 {
+    word-wrap:normal;
+ text-overflow:ellipsis;
+ overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--terciario);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Tarjeta del producto en el carrusel */
+.design-two .category-circles-section .card {
+  background: linear-gradient(to bottom, var(--fondo1), var(--fondo2));
+  border: 2px solid var(--secundario1);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para la tarjeta */
+.design-two .category-circles-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del producto */
+.design-two .category-circles-section .card-img-top {
+  width: 80%; /* Ajustado desde design-one */
+  max-height: 180px; /* Ajustado desde design-one */
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 10px auto 0.5rem; /* Ajustado desde design-one */
+  display: block;
+}
+
+/* Título del producto */
+.design-two .category-circles-section .card-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--fuenteSecundaria);
+  color: var(--terciario);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+/* Precio y descuento */
+.design-two .category-circles-section .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--fuenteSecundaria);
+}
+
+/* Precio */
+.design-two .category-circles-section .price h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--secundario2);
+  margin: 0;
+  font-family: var(--fuenteSecundaria);
+}
+
+/* Descuento */
+.design-two .category-circles-section .price p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--fondo4);
+  margin: 0;
+  font-family: var(--fuenteSecundaria);
+}
+
+/* Botón "Ver más" */
+.design-two .category-circles-section .btn {
+  background: linear-gradient(to right, var(--secundario1), var(--secundario2));
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--fuenteSecundaria);
+  text-transform: uppercase;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+.design-two .category-circles-section .btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, var(--secundario2), var(--secundario1));
+}
+
+/* Contenedor de la animación Lottie */
+.design-two .category-circles-section .player-wrapper {
+  display: flex;
+  width:40%;
+  transform: translate(15%,10%);
+  height: 30%;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Estilo de los botones de navegación de Swiper */
+.design-two .category-circles-section .swiper-button-prev,
+.design-two .category-circles-section .swiper-button-next {
+  color: var(--secundario1);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover para los botones de navegación */
+.design-two .category-circles-section .swiper-button-prev:hover,
+.design-two .category-circles-section .swiper-button-next:hover {
+  transform: scale(1.1);
+}
+
+
+
+@media (max-width: 1300px) {
+
+}
+
+
+@media (max-width: 1200px) {
+.design-two .category-circles-section .player-wrapper {
+    transform: translate(5%,10%);
+  }
+   .design-two .category-circles-section .circles-container {
+  width: 400px;
+  height: 400px;
+  }
+  .design-two .category-circles-section .central-circle {
+  width: 130px;
+  height: 130px;
+  }
+
+.design-two .category-circles-section .surrounding-circle {
+  width: 100px;
+  height: 100px;
+  font-size: 0.8rem;
+}
+.design-two .category-circles-section .carousel-popup {
+  width: 300px; 
+  left: 58%; 
+  padding:5px 20px;
+}
+
+}
+
+
+@media (max-width: 1100px) {
+.design-two .category-circles-section .player-animation {
+    width: 100%; 
+      height: 80%;
+  }
+
+  .design-two .player-wrapper {
+        margin-top: 20px;
+  width: 100%;
+  height: 50%;
+transform: translateY(10%);
+}
+  
+    .design-two .category-circles-section .circles-container {
+  width: 450px;
+  height: 450px;
+  }
+  .design-two .category-circles-section .central-circle {
+  width: 140px;
+  height: 140px;
+  }
+
+.design-two .category-circles-section .surrounding-circle {
+  width: 110px;
+  height: 110px;
+  font-size: 1rem;
+}
+.design-two .category-circles-section .carousel-popup {
+  left: 60%; 
+}
+}
+
+
+@media (max-width: 960px) {
+ .design-two .category-circles-section .category-container {
+    flex-direction: column;
+    gap: 80px; 
+  }
+  .design-two .category-circles-section .circles-container {
+  left:-8%
+  }
+      .design-two .player-wrapper {
+  width: 70% !important  ;
+  height: 50%;
+  transform: translateY(30%) !important;
+}
+  .design-two .player-animation {
+    width: 100%; 
+    height: 70%;
+  }
+
+.design-two .category-circles-section .carousel-popup {
+  top: 70%;
+  left: 35%; 
+}
+}
+
+
+@media (max-width: 768px) {
+    .design-two .category-circles-section {
+  padding: 5vh 20px 30% 20px; 
+}
+
+  .design-two .category-circles-section .circles-container {
+    width: 480px; 
+    height: 480px;
+    margin: 0 auto; 
+      left:-8%
+  }
+
+  .design-two .category-circles-section .central-circle {
+    width: 140px; 
+    height: 140px;
+  }
+
+  .design-two .category-circles-section .surrounding-circle {
+    width: 110px; 
+    height: 110px;
+  }
+
+  .design-two .category-circles-section .circle-0 {
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .design-two .category-circles-section .circle-1 {
+    top: 50%;
+    right: -12%;
+    transform: translateY(-50%);
+  }
+
+  .design-two .category-circles-section .circle-2 {
+    bottom: -12%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .design-two .category-circles-section .circle-3 {
+    top: 50%;
+    left: 14%;
+    transform: translateY(-50%);
+  }
+
+  .design-two .category-circles-section .carousel-popup {
+    position: relative;
+    width: 70%; 
+    max-width: 350px;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin: 20px auto;
+  }
+}
+
+
+@media (max-width: 620px) {
+
+   .design-two .category-circles-section .circles-container {
+    width: 420px; 
+    height: 420px;
+      left:-11%
+  }
+
+  .design-two .category-circles-section .central-circle {
+    width: 120px; 
+    height: 120px;
+  }
+  .design-two .category-circles-section .surrounding-circle {
+    width: 100px; 
+    height: 100px;
+  }
+  .design-two .player-wrapper {
+  width: 90% !important  ;
+  height: 50%;
+  transform: translateY(30%) !important;
+}
+
+}
+
+
+@media (max-width: 480px) {
+  .design-two .category-circles-section {
+  padding: 5vh 20px 40% 20px; 
+}
+
+  .design-two .category-circles-section h2 {
+    font-size: 2rem; /* Ajustado desde design-one */
+  }
+
+  .design-two .category-circles-section .circles-container {
+    width: 360px; /* Ajustado desde design-one */
+    height: 360px;
+  }
+
+  .design-two .category-circles-section .central-circle {
+    width: 110px; /* Ajustado desde design-one */
+    height: 110px;
+    font-size: 1rem;
+  }
+
+  .design-two .category-circles-section .surrounding-circle {
+    width: 95px; /* Ajustado desde design-one */
+    height: 95px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .category-circles-section .player-animation {
+    width: 320px; /* Ajustado desde design-one */
+    height: 250px;
+  }
+
+  .design-two .category-circles-section .carousel-popup {
+    width: 70%;
+    max-width: 350px;
+  }
+
+  .design-two .category-circles-section .card-img-top {
+    max-height: 140px; /* Ajustado desde design-one */
+  }
+
+  .design-two .category-circles-section .card-title {
+    font-size: 0.9rem;
+  }
+
+  .design-two .category-circles-section .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .design-two .category-circles-section h2 {
+    font-size: 1.6rem; /* Ajustado desde design-one */
+  }
+
+  .design-two .category-circles-section .circles-container {
+    left:-40px;
+    margin: 0 auto;
+    width: 300px; 
+    height: 300px;
+  }
+
+  .design-two .category-circles-section .central-circle {
+    width: 90px;
+    height: 90px;
+    font-size: 0.9rem;
+  }
+
+  .design-two .category-circles-section .surrounding-circle {
+    width: 75px;
+    height: 75px;
+    font-size: 0.5rem;
+  }
+}

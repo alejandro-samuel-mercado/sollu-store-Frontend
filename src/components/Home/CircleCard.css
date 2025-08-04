@@ -1,0 +1,123 @@
+ .circle-card-container {
+  width: 100%; /* Ocupa todo el ancho */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 3rem 1rem; /* Espaciado interno */
+  font-family: var(--fuenteSecundaria), sans-serif; /* Usamos la fuente Jua */
+  border-radius: 12px; /* Bordes redondeados */
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  gap: 7rem; /* Espacio entre los círculos */
+  flex-wrap: wrap; 
+}
+
+/* Contenedor de cada círculo y su texto */
+ .circle-card-container .div-card-circle {
+  display: flex;
+  flex-direction: column; /* Círculo arriba, texto abajo */
+  align-items: center; /* Centrado horizontal */
+  gap: 1rem; /* Espacio entre el círculo y el texto */
+  transition: transform 0.3s ease; /* Transición suave para efectos */
+}
+
+/* Efecto hover para el contenedor de cada círculo */
+.circle-card-container .div-card-circle:hover {
+  transform: translateY(-10px); /* Efecto de elevación al hacer hover */
+}
+
+/* Círculo individual */
+ .circle-card-container .circle-card {
+  width: 250px; /* Tamaño del círculo */
+  height: 250px;
+  border-radius: 50%; /* Forma circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra pronunciada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto hover para el círculo */
+ .circle-card-container .div-card-circle:hover .circle-card {
+  transform: scale(1.1); /* Efecto de escala al hacer hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Imagen dentro del círculo */
+ .circle-card-container .circle-card img {
+  width: 60%; /* La imagen ocupa todo el círculo */
+  height: 60%;
+}
+
+/* Texto debajo del círculo */
+ .circle-card-container h3 {
+  font-size: 1.2rem; /* Tamaño de fuente */
+  font-weight: 400; /* Peso normal, ya que Jua es bold */
+  color: var(--terciario); /* Color gris oscuro */
+  text-transform: uppercase; /* Estilo común */
+  text-align: center; /* Centrado */
+  margin: 0; /* Sin márgenes */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+/* Efecto hover para el texto */
+ .circle-card-container .div-card-circle:hover h3 {
+  color: var(--secundario1); /* Cambia el color del texto al hacer hover */
+}
+
+ .circle-card.animate {
+  animation: flipIn 0.9s ease-out forwards;
+  animation-delay: calc(0.5s * var(--index, 0)); /* Retraso escalonado */
+}
+
+/* Nueva animación: Flip In */
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: perspective(400px) rotateY(90deg); /* Comienza volteado */
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0deg); /* Termina plano */
+  }
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+ .circle-card-container {
+    gap: 7rem; /* Reducimos el espacio entre los círculos */
+  }
+
+  .circle-card-container .circle-card {
+    width: 220px; /* Reducimos el tamaño del círculo */
+    height: 220px;
+  }
+
+ .circle-card-container h3 {
+    font-size: 1.1rem; /* Reducimos el tamaño del texto */
+  }
+}
+
+@media (max-width: 1000px) {
+  .circle-card-container {
+    gap: 4rem;
+  }
+   .circle-card-container .circle-card {
+    width: 220px; /* Reducimos aún más el tamaño del círculo */
+    height: 220px;
+  }
+
+ .circle-card-container h3 {
+    font-size: 1.4rem; /* Reducimos el tamaño del texto */
+  }
+}
+
+@media (max-width: 768px) {
+ .circle-card-container {
+  flex-direction: column;
+    padding: 2rem 0.5rem; /* Reducimos el padding */
+  }
+  .circle-card-container h3 {
+    font-size: 1.3rem; /* Reducimos el tamaño del texto */
+  }
+}

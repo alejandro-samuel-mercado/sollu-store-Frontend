@@ -1,0 +1,373 @@
+/* Contenedor principal */
+.design-two .politicas-container {
+  min-height: 100vh;
+  padding: 120px 20px 80px 20px;
+  background: linear-gradient(135deg, var(--primario1) 0%, var(--secundario1) 100%); /* Gradiente vibrante */
+  font-family: var(--fuentePrimaria), sans-serif; /* Usamos la fuente Jua */
+  position: relative; /* Para elementos decorativos */
+  overflow: hidden;
+}
+
+/* Formas decorativas flotantes (círculos) */
+.design-two .politicas-container::before,
+.design-two .politicas-container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: float 10s infinite ease-in-out;
+}
+
+.design-two .politicas-container::before {
+  width: 200px;
+  height: 200px;
+  top: 5%;
+  left: 10%;
+}
+
+.design-two .politicas-container::after {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+/* Sección Hero */
+.design-two .hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--fondo1); /* Fondo blanco semitransparente */
+  border-radius: 40px; /* Bordes redondeados */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Sombra pronunciada */
+  margin-bottom: 40px;
+  position: relative;
+  border: 3px solid var(--primario1); /* Borde azul */
+}
+
+/* Círculo decorativo en la sección Hero */
+.design-two .hero-section::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background: var(--secundario1); /* Color verde claro */
+  border-radius: 50%;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Título de la sección Hero */
+.design-two .hero-title {
+  font-size: clamp(3rem, 6vw, 5rem); /* Tamaño más grande */
+  color: var(--terciario); /* Color gris oscuro */
+  font-weight: 400; /* Peso normal, ya que Jua es bold */
+  text-transform: uppercase;
+  letter-spacing: 4px; /* Espaciado entre letras */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Sombra pronunciada */
+  margin-bottom: 20px;
+}
+
+/* Subtítulo de la sección Hero */
+.design-two .hero-subtitle {
+  font-size: 1.5rem; /* Tamaño más grande */
+  color: var(--fondo5); /* Color gris */
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Secciones de términos y privacidad */
+.design-two .terms-section,
+.design-two .privacy-section {
+  margin-bottom: 60px;
+  padding: 40px;
+  background: var(--fondo1); /* Fondo blanco semitransparente */
+  border-radius: 40px; /* Bordes redondeados */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Sombra pronunciada */
+  border: 3px solid var(--secundario1); /* Borde verde claro */
+  position: relative;
+}
+
+/* Título de las secciones */
+.design-two .section-title {
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Tamaño más grande */
+  color: var(--terciario); /* Color gris oscuro */
+  font-weight: 400; /* Peso normal */
+  text-transform: uppercase;
+  letter-spacing: 3px; /* Espaciado entre letras */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Sombra pronunciada */
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+}
+
+/* Círculo decorativo debajo del título de la sección */
+.design-two .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background: var(--primario1); /* Color azul */
+  border-radius: 50%;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Texto introductorio */
+.design-two .intro-text {
+  font-size: 1.3rem; /* Tamaño más grande */
+  color: var(--fondo5); /* Color gris */
+  line-height: 1.8;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+/* Elementos de términos y privacidad */
+.design-two .term-item,
+.design-two .privacy-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding: 20px 40px;
+  background: #fff; /* Fondo blanco */
+  border-radius: 30px; /* Bordes redondeados */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para los elementos */
+.design-two .term-item:hover,
+.design-two .privacy-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Íconos de términos y privacidad */
+.design-two .term-icon,
+.design-two .privacy-icon {
+  font-size: 2.5rem; /* Tamaño más grande */
+  color: var(--secundario1); /* Color verde claro */
+  margin-right: 20px;
+  background: linear-gradient(45deg, var(--primario1), var(--secundario1)); /* Gradiente */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Títulos de los elementos */
+.design-two .term-title,
+.design-two .privacy-title {
+  font-size: 1.8rem; /* Tamaño más grande */
+  color: var(--terciario); /* Color gris oscuro */
+  font-weight: 400; /* Peso normal */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Espaciado entre letras */
+  margin-bottom: 10px;
+  margin-right: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto de los elementos */
+.design-two .term-text,
+.design-two .privacy-text {
+  font-size: 1.2rem; /* Tamaño más grande */
+  color: var(--fondo5); /* Color gris */
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Enlaces dentro del texto */
+.design-two .privacy-text a {
+  color: var(--primario1); /* Color azul */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para los enlaces */
+.design-two .privacy-text a:hover {
+  color: var(--secundario1); /* Color verde claro */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección Footer */
+.design-two .footer-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.95); /* Fondo blanco semitransparente */
+  border-radius: 40px; /* Bordes redondeados */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Sombra pronunciada */
+  border: 3px solid var(--primario1); /* Borde azul */
+  position: relative;
+}
+
+/* Círculo decorativo en el footer */
+.design-two .footer-section::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background: var(--secundario1); /* Color verde claro */
+  border-radius: 50%;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Texto del footer */
+.design-two .footer-section p {
+  font-size: 1.3rem; /* Tamaño más grande */
+  color: var(--fondo5); /* Color gris */
+  margin-bottom: 20px;
+}
+
+/* Botón de soporte */
+.design-two .support-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(45deg, var(--primario1), var(--secundario1)); /* Gradiente vibrante */
+  color: var(--colorFuente1); /* Texto blanco */
+  font-size: 1.2rem; /* Tamaño más grande */
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 25px; /* Bordes redondeados */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+/* Efecto hover para el botón de soporte */
+.design-two .support-button:hover {
+  background: linear-gradient(45deg, var(--secundario1), var(--primario1)); /* Gradiente invertido */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Animaciones */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+ .design-two  .politicas-container {
+    padding: 20px 10px;
+  }
+
+ .design-two  .hero-section,
+  .design-two .terms-section,
+  .design-two .privacy-section,
+  .design-two .footer-section {
+    padding: 20px;
+    border-radius: 30px; /* Bordes redondeados más pequeños */
+  }
+
+  .design-two .hero-title {
+    font-size: 3rem; /* Reducimos el tamaño */
+  }
+
+  .design-two .hero-subtitle {
+    font-size: 1.3rem; /* Reducimos el tamaño */
+  }
+
+  .design-two .section-title {
+    font-size: 2.5rem; /* Reducimos el tamaño */
+  }
+
+  .design-two .intro-text {
+    font-size: 1.1rem; /* Reducimos el tamaño */
+  }
+
+ .design-two  .term-item,
+ .design-two  .privacy-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+ .design-two  .term-icon,
+  .design-two .privacy-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .design-two .term-title,
+  .design-two .privacy-title {
+    font-size: 1.5rem; /* Reducimos el tamaño */
+  }
+
+ .design-two  .term-text,
+ .design-two  .privacy-text {
+    font-size: 1rem; /* Reducimos el tamaño */
+  }
+  .design-two .footer-section p {
+    font-size: 1.1rem; /* Reducimos el tamaño */
+  }
+
+ .design-two  .support-button {
+    font-size: 1rem; /* Reducimos el tamaño */
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+ .design-two   .hero-title {
+    font-size: 2.5rem; /* Reducimos aún más el tamaño */
+  }
+
+ .design-two   .hero-subtitle {
+    font-size: 1.1rem; /* Reducimos aún más el tamaño */
+  }
+
+ .design-two   .section-title {
+    font-size: 2rem; /* Reducimos aún más el tamaño */
+  }
+
+ .design-two   .intro-text {
+    font-size: 1rem; /* Reducimos aún más el tamaño */
+  }
+
+ .design-two   .term-title,
+ .design-two   .privacy-title {
+    font-size: 1.3rem; /* Reducimos aún más el tamaño */
+  }
+
+ .design-two   .term-text,
+ .design-two   .privacy-text {
+    font-size: 0.9rem; /* Reducimos aún más el tamaño */
+  }
+
+  .design-two  .term-icon,
+  .design-two  .privacy-icon {
+    font-size: 2rem; /* Reducimos el tamaño */
+  }
+
+.design-two    .footer-section p {
+    font-size: 1rem; /* Reducimos aún más el tamaño */
+  }
+
+ .design-two   .support-button {
+    font-size: 0.9rem; /* Reducimos aún más el tamaño */
+    padding: 10px 20px;
+  }
+}

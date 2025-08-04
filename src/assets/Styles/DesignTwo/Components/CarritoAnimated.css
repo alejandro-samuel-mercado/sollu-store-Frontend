@@ -1,0 +1,29 @@
+.design-two .carro-platform {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  margin: 100px  0;
+  width: 100%;
+  height: 300px;
+  align-items: center !important;
+}
+
+.design-two .carro.visible {
+  opacity: 1;
+}
+
+.design-two .platform {
+  background-color: var(--primario1);
+  margin: auto 0;
+  height: 40px;
+  width: 120%;
+  }
+.design-two .carro {
+  position: relative;
+  height: auto;
+  width: 120px;
+  opacity: 0;
+  top:30px;
+  transition: opacity 0.5s ease-in-out;
+  transform-origin: bottom left;
+}

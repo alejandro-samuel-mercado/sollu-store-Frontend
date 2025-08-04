@@ -1,18 +1,39 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Dependencias y builds
+/node_modules
+/.next
+/out
+/.svelte-kit
+/build
+/dist
+/.cache
+.turbo
 
-# Other files and folders
-.settings/
+# Variables de entorno
+*.env*
+!.env.example
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Testing
+/coverage
+/junit.xml
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Misceláneos
+*.log
+*.tmp
+*.pid
+*.seed
+*.pid.lock
+
+# Editor
+.idea
+.vscode/
+*.swp
+*.swo
+*~
+
+# Sistema operativo
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db

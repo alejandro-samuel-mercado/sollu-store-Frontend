@@ -1,0 +1,431 @@
+.design-one .contacto-container {
+  position: relative;
+  height: auto;
+  min-height: 250vh;
+  background: linear-gradient(135deg, var(--fondo1), var(--fondo2));
+  font-family: var(--fuentePrimaria);
+  padding: 120px 20px 50px 20px;
+  overflow: hidden;
+}
+
+.design-one .contacto-animation {
+  background-color: var(--primario1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.design-one .contacto-content {
+  position: relative;
+  z-index: 1;
+  max-width: auto;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.design-one .contacto-header {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(45deg, var(--primario1), var(--primario2));
+  border-radius: 20px;
+  color: var(--colorFuentePrimaria);
+  box-shadow: 0 8px 20px rgba(72, 82, 149, 0.3);
+}
+
+.design-one .contacto-title {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.design-one .contacto-subtitle {
+  font-family: var(--fuenteSecundaria);
+  font-size: 1.3rem;
+  margin: 5px 0;
+  color: var(--cuarto);
+}
+
+.design-one .contact-info {
+  font-family: var(--fuenteSecundaria);
+  grid-column: span 1;
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  margin-left: 25%;
+  background: var(--fondo3);
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.644);
+  transition: transform 0.3s ease;
+}
+
+.design-one .contact-info:hover {
+  transform: translateY(-5px);
+}
+
+.design-one .info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: var(--fondo2);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.design-one .info-item:hover {
+  background-color: var(--cuarto);
+}
+
+.design-one .info-icon {
+  font-size: 1.8rem;
+  color: var(--primario1);
+  transition: color 0.3s ease;
+}
+
+.design-one .info-item:hover .design-one .info-icon {
+  color: var(--secundario1);
+}
+
+.design-one .contact-form-section {
+  grid-column: span 2;
+  padding: 25px;
+  width: 70%;
+  margin-left: 45%;
+  background: var(--fondo3);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.603);
+}
+
+.design-one .form-title {
+  font-size: 2rem;
+  color: var(--terciario);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.design-one .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.design-one .form-input,
+.design-one .form-textarea {
+  padding: 12px;
+  font-family: var(--fuenteSecundaria);
+  border: 2px solid var(--fondo4);
+  border-radius: 12px;
+  width: 80%;
+  font-size: 1.1rem;
+  background: var(--fondo2);
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.design-one .form-input:focus,
+.design-one .form-textarea:focus {
+  border-color: var(--secundario1);
+  box-shadow: 0 0 10px var(--cuarto);
+  outline: none;
+}
+
+.design-one .form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.design-one .form-submit {
+  padding: 12px;
+  background: var(--primario1);
+  color: var(--colorFuentePrimaria);
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--fuentePrimaria);
+}
+
+.design-one .form-submit:hover {
+  background: var(--secundario2);
+  transform: translateY(-3px);
+}
+
+.design-one .submit-message {
+  color: var(--secundario1);
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.design-one .map-section {
+  grid-column: span 3;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin-top: 50px;
+  margin-top: 100px;
+  background: var(--fondo3);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.design-one .map-title {
+  font-size: 2rem;
+  color: var(--terciario);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.design-one .social-section {
+  grid-column: span 1;
+  padding: 20px;
+  height: 25vh;
+  margin-top: 23%;
+  background: var(--fondo3);
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.514);
+}
+
+.design-one .social-title {
+  font-size: 1.8rem;
+  color: var(--terciario);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.design-one .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.design-one .social-icon {
+  max-width: 50px;
+  max-height: 50px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 50%;
+  padding: 5px;
+  background: var(--fondo2);
+}
+
+.design-one .social-icon:hover {
+  transform: scale(1.3);
+  filter: brightness(1.2);
+}
+
+.design-one .info-text {
+  grid-column: span 2;
+  padding: 20px;
+  margin: 15% auto 0 auto;
+  background: var(--fondo3);
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.design-one .info-text p {
+  font-size: 1.2rem;
+  color: var(--terciario);
+  line-height: 1.8;
+  text-align: center;
+}
+
+.design-one .whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--secundario1);
+  color: var(--colorFuenteSecundaria);
+  padding: 15px 25px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(80, 200, 120, 0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.design-one .whatsapp-button:hover {
+  background: var(--secundario2);
+  transform: translateY(-5px) scale(1.1);
+}
+
+.design-one .whatsapp-button svg {
+  font-size: 1.5rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1220px) {
+  .design-one .contact-form-section {
+    margin-left: 20%;
+    width: 70%;
+  }
+  .design-one .social-section {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 1000px) {
+  .design-one .contacto-content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .design-one .social-section {
+    grid-column: span 1;
+  }
+
+  .design-one .contact-form-section {
+    margin: 5% auto;
+  }
+  .design-one .contacto-header {
+    max-height: 300px;
+  }
+  .design-one .contact-info {
+    margin-left: 0;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .design-one .contacto-container {
+    padding: 70px 0 50px 0;
+  }
+  .design-one .contacto-header {
+    border-radius: 0;
+    padding: 70px auto;
+  }
+
+  .design-one .contacto-content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .design-one .contact-info {
+    margin: 5% auto;
+  }
+  .design-one .contacto-title {
+    font-size: 2.2rem;
+  }
+
+  .design-one .contacto-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .design-one .contact-form-section,
+  .design-one .map-section {
+    grid-column: 1 / -1;
+  }
+
+  .design-one .form-input,
+  .design-one .form-textarea {
+    font-size: 1rem;
+  }
+
+  .design-one .map-title {
+    font-size: 1.7rem;
+  }
+
+  .design-one .whatsapp-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .design-one .whatsapp-button svg {
+    font-size: 1.3rem;
+  }
+  .design-one .contact-info {
+    width: 90%;
+  }
+  .design-one .contact-form-section {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .design-one .contacto-container {
+    padding: 50px 0 50px 0;
+  }
+
+  .design-one .contacto-title {
+    font-size: 1.8rem;
+  }
+  .design-one .contacto-header {
+    padding: 100px auto;
+  }
+
+  .design-one .contact-info,
+  .design-one .contact-form-section {
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .design-one .form-title,
+  .design-one .map-title,
+  .design-one .social-title {
+    font-size: 1.5rem;
+  }
+
+  .design-one .info-text p {
+    font-size: 1.1rem;
+  }
+
+  .design-one .whatsapp-button {
+    bottom: 10px;
+    right: 10px;
+  }
+}

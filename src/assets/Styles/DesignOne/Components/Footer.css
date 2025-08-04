@@ -1,0 +1,33 @@
+.design-one footer {
+  background: linear-gradient(
+    145deg,
+    var(--terciario),
+    var(--primario1),
+    var(--primario1),
+    var(--primario2),
+    var(--primario2)
+  );
+  color: var(--colorFuentePrimaria);
+  
+  text-align: center;
+  padding-top: 2%;
+  margin-top: 10% !important;
+  padding: 10vh 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.856);
+}
+
+.design-one footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.design-one footer ul li {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+
+.design-one footer table {
+ margin: auto;
+}
