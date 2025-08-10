@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Sollu Store Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**E-commerce Platform Frontend — React & Django**
 
-## Available Scripts
+La plataforma Sollu Store es una tienda en línea moderna y dinámica, diseñada para ofrecer una experiencia de compra fluida y atractiva. Desarrollada con React en el frontend y Django en el backend, la aplicación integra diversas funcionalidades avanzadas para mejorar la interacción del usuario y la gestión de productos.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Características principales
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Pasarelas de Pago Integradas**  
+  Soporte para pagos mediante PayPal y Mercado Pago, adaptándose al país del usuario.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Escaneo de Productos por QR**  
+  Funcionalidad para escanear códigos QR y acceder rápidamente a la información del producto.
 
-### `npm test`
+- **Carrito de Compras en Tiempo Real**  
+  Actualización dinámica del carrito de compras con cada acción del usuario.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Lista de Favoritos**  
+  Permite a los usuarios guardar productos de su interés para futuras compras.
 
-### `npm run build`
+- **Filtrado Avanzado de Productos**  
+  Opciones para filtrar productos por categorías, fechas, precios y otros atributos.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Inicio de Sesión Real**  
+  Autenticación de usuarios mediante integración con el backend, gestionando sesiones y permisos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Cambio de Tema Dinámico**  
+  Los administradores pueden modificar el tema y diseño del sitio desde el panel de administración.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Prueba Virtual de Ropa**  
+  Funcionalidad para probarse prendas utilizando la cámara del dispositivo, siguiendo movimientos y gestos del usuario.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠 Tecnologías utilizadas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Frontend:** React, CSS personalizado  
+- **Backend:** Django  
+- **Estado Global:** Context API  
+- **Ruteo:** React Router  
+- **Autenticación:** Integración con el backend Django  
+- **Otros:** WebRTC para prueba virtual de ropa, integración con APIs de PayPal y Mercado Pago
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📦 Instalación
 
-## Learn More
+Para ejecutar el proyecto localmente, sigue estos pasos:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# Clonar el repositorio
+git clone https://github.com/alejandro-samuel-mercado/sollu-store-Frontend.git
+cd sollu-store-Frontend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Instalar dependencias
+npm install
 
-### Code Splitting
+# Iniciar la aplicación
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+📄 Documentación Para una guía más detallada sobre el uso y personalización del panel, consulta la documentación incluida en el repositorio o contacta con el desarrollador principal.
 
-### Analyzing the Bundle Size
+💡 Contribuciones Las contribuciones son bienvenidas. Si deseas mejorar o agregar nuevas funcionalidades, por favor sigue estos pasos:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Haz un fork del repositorio.
 
-### Making a Progressive Web App
+Crea una nueva rama para tu característica (git checkout -b feature/nueva-funcionalidad).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Realiza tus cambios y haz commit (git commit -am 'Añadir nueva funcionalidad').
 
-### Advanced Configuration
+Empuja tus cambios a tu fork (git push origin feature/nueva-funcionalidad).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Abre un Pull Request describiendo tus cambios.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📄 Licencia Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
